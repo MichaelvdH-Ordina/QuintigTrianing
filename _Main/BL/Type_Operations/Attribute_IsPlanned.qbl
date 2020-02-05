@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute IsPlanned
+{
+  #keys: '3[409348.0.12000929][409348.0.12000928][409348.0.12000930]'
+  Description: 'Tells if a operation is planned or not'
+  ValueType: Boolean
+}

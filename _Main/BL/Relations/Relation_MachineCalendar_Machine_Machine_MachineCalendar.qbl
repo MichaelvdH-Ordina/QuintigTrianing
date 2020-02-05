@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: #root
+Relation MachineCalendar_Machine_Machine_MachineCalendar
+{
+  #keys: '1[409348.0.35761893]'
+  DefaultRelationStrategy
+  {
+  }
+  RelationSide.LeftSide Machine
+  {
+    #keys: '3[409348.0.35761895][409348.0.35761894][409348.0.35761896]'
+    Cardinality: '0to1'
+    ObjectDefinition: MachineCalendar
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide MachineCalendar
+  {
+    #keys: '3[409348.0.35761898][409348.0.35761897][409348.0.35761899]'
+    Cardinality: '0to1'
+    ObjectDefinition: Machine
+    OwningSide: 'Owned'
+  }
+}

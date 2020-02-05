@@ -1,0 +1,11 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Type Operation
+{
+  #keys: '5[409348.0.2831051][409348.0.2831049][0.0.0][409348.0.2831050][409348.0.2831052]'
+  BaseType: Object
+  Description: 'Different operations an order must go through'
+  OnDelete: 'this.Unplan();'
+  StructuredName: 'Operations'
+}

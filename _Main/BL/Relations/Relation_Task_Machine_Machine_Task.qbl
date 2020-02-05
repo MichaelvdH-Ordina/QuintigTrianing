@@ -1,0 +1,25 @@
+Quintiq file version 2.0
+#parent: #root
+Relation Task_Machine_Machine_Task
+{
+  #keys: '1[409348.0.2831102]'
+  Description: 'Each machine must execute several tasks'
+  ProceduralSequenceRelationStrategy
+  {
+    #keys: '13[0.0.0][409348.0.2831119][409348.0.2831113][409348.0.2831120][409348.0.2831114][409348.0.2831121][409348.0.2831115][409348.0.2831122][409348.0.2831116][409348.0.2831123][409348.0.2831117][409348.0.2831124][409348.0.2831118]'
+  }
+  RelationSide.LeftSide Machine
+  {
+    #keys: '3[409348.0.2831104][409348.0.2831103][409348.0.2831105]'
+    Cardinality: '0to1'
+    ObjectDefinition: Task
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide Task
+  {
+    #keys: '3[409348.0.2831107][409348.0.2831106][409348.0.2831108]'
+    Cardinality: '1toN'
+    ObjectDefinition: Machine
+    OwningSide: 'Owned'
+  }
+}

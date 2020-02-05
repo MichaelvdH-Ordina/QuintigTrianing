@@ -1,0 +1,133 @@
+Quintiq file version 2.0
+Component ListOrder
+{
+  #keys: '[409348.0.6353069]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles467
+    Component popupList650
+    {
+      #keys: '[409348.0.6353073]'
+      BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuSeparator { #keys: '[409348.0.6353090]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuNewOrder { #keys: '[409348.0.6353091]' BaseType: 'Menu' Properties: [ Image: 'NEW' Shortcut: 'Ins' Text: '&New...' ] }
+            Component MenuEditOrder { #keys: '[409348.0.6353092]' BaseType: 'Menu' Properties: [ BindDoubleClick: true Image: 'EDITOBJECT' Shortcut: 'Enter' Text: '&Edit...' ] }
+            Component MenuDeleteOrder { #keys: '[409348.0.6353093]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Shortcut: 'Del' Text: '&Delete' ] }
+            Component MenuPlanOrder { #keys: '[409348.0.24971746]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_ADD' Shortcut: 'Alt+P' Text: 'Plan' ] }
+            Component MenuSeparator309 { #keys: '[409348.0.24974754]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuUnplanOrder { #keys: '[409348.0.24975362]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_DELETE' Shortcut: 'Alt+U' Text: 'Unplan' ] }
+            Component MenuEditOrder211 { #keys: '[409348.0.74655054]' BaseType: 'Menu' Properties: [ Image: 'Edit' Shortcut: 'Ctrl+Enter' Text: 'Edit order...' ] }
+            Component MenuNewOrder742 { #keys: '[409348.0.74676100]' BaseType: 'Menu' Properties: [ Image: 'New' Shortcut: 'Ctrl+Ins' Text: 'New order...' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+              c: MenuSeparator
+              c: MenuPlanOrder
+              c: MenuUnplanOrder
+              c: MenuSeparator309
+              c: MenuNewOrder
+              c: MenuNewOrder742
+              c: MenuEditOrder
+              c: MenuEditOrder211
+              c: MenuDeleteOrder
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        PosX: 35
+        PosY: 60
+      ]
+    }
+    Component GUIDataExtractor133
+    {
+      #keys: '[409348.0.6353075]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        DataSet: 'Company'
+        DataType: 'Company'
+        PosX: 5
+        PosY: 30
+        Transformation: 'Order'
+      ]
+    }
+    Component GUIDataSetLevel184
+    {
+      #keys: '[409348.0.6353076]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        Columns: 'OrderColumns'
+        DataExtractor: 'GUIDataExtractor133'
+        PosX: 35
+        PosY: 30
+        SortCriteria: "datamember:'OrderNr'"
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupList650'
+    FullRowSelect: true
+    ScrollOnHighlight: true
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles467
+      c: popupList650
+      c: GUIDataExtractor133
+      c: GUIDataSetLevel184
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOrder_Menu_OnClick
+    {
+      #keys: '[409348.0.6353077]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[27.0.1839821]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOrder_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.6353078]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[27.0.1839866]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

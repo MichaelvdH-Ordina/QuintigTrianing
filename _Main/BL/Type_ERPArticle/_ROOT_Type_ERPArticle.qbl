@@ -1,0 +1,9 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Type ERPArticle
+{
+  #keys: '5[409348.0.64651097][409348.0.64651095][0.0.0][409348.0.64651096][409348.0.64651098]'
+  BaseType: Object
+  StructuredName: 'ERPArticles'
+}

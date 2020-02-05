@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Width
+{
+  #keys: '3[409348.0.46202784][409348.0.46202783][409348.0.46202785]'
+  Description: 'Width of an order'
+  ValueType: Number
+}

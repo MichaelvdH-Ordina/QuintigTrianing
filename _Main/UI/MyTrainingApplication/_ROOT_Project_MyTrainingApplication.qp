@@ -1,0 +1,11 @@
+Quintiq file version 2.0
+#parent: #root
+Project id:MyTrainingApplication
+{
+  ProjectProperties
+  {
+    BuildVersion: '4.0.56.101'
+    Description: 'Quico planning application'
+    ProjectKind: 'DesktopClient'
+  }
+}

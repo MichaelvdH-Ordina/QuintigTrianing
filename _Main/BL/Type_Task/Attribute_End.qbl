@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute End
+{
+  #keys: '3[409348.0.12000144][409348.0.12000143][409348.0.12000145]'
+  Description: 'End time of the task'
+  ValueType: DateTime
+}

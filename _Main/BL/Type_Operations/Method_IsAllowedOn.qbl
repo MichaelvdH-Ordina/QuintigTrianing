@@ -1,0 +1,25 @@
+Quintiq file version 2.0
+#parent: #root
+Method IsAllowedOn (Machine machine) declarative remote as Boolean
+{
+  Description: 'Check if an operation is allowed to be planned on a certain machine.'
+  TextBody:
+  [*
+    // mho23702 Feb-3-2020 (created)
+    feedbackobject := FeedbackObject::LocalFeedback();
+    value := this.OperationType() = machine.OperationType();
+    checkwidth := this.Order().Width() <= machine.MaximumWidth();
+    
+    if( not feedbackobject.CheckHard( value ) )
+    {
+      feedbackobject.AddHard( value, Translations::Feedback_CheckOperationType( this, machine ) );
+    }
+    
+    if( not feedbackobject.CheckHard( checkwidth ) )
+    {
+      feedbackobject.AddHard( checkwidth, Translations::Feedback_CheckMaxWidth( this, machine ) );
+    }
+    
+    return feedbackobject.IsAllowed();
+  *]
+}

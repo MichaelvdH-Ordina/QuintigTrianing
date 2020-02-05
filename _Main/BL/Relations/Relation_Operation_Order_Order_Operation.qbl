@@ -1,0 +1,25 @@
+Quintiq file version 2.0
+#parent: #root
+Relation Operation_Order_Order_Operation
+{
+  #keys: '1[409348.0.2831054]'
+  Description: 'Each order must be Cut (c), Folded (f) and Packed (p)'
+  ProceduralSequenceRelationStrategy
+  {
+    #keys: '13[0.0.0][409348.0.2831071][409348.0.2831065][409348.0.2831072][409348.0.2831066][409348.0.2831073][409348.0.2831067][409348.0.2831074][409348.0.2831068][409348.0.2831075][409348.0.2831069][409348.0.2831076][409348.0.2831070]'
+  }
+  RelationSide.LeftSide Order
+  {
+    #keys: '3[409348.0.2831056][409348.0.2831055][409348.0.2831057]'
+    Cardinality: '0to1'
+    ObjectDefinition: Operation
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide Operation
+  {
+    #keys: '3[409348.0.2831059][409348.0.2831058][409348.0.2831060]'
+    Cardinality: '1toN'
+    ObjectDefinition: Order
+    OwningSide: 'Owned'
+  }
+}

@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Plan (Operations operations)
+{
+  TextBody:
+  [*
+    // mho23702 Feb-3-2020 (created)
+    traverse( operations, Elements, operation)
+    {
+      operation.Plan();
+      
+      Transaction::Transaction().Propagate( attribute( Machine, EndOfLastTask ) );
+    }
+  *]
+}

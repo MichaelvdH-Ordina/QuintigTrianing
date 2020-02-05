@@ -1,0 +1,22 @@
+Quintiq file version 2.0
+Component EditorLength
+{
+  #keys: '[409348.0.54910004]'
+  BaseType: 'Editor'
+  Children:
+  [
+    Component popupEdit825
+    {
+      #keys: '[409348.0.54910005]'
+      BaseType: 'popupEdit'
+    }
+  ]
+  Properties:
+  [
+    BackgroundColor: 'Window'
+    Border: true
+    ContextMenu: 'popupEdit825'
+    DataBinding: 'Dialog.Data.Length'
+    WordWrap: true
+  ]
+}

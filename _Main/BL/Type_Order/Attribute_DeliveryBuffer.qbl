@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute DeliveryBuffer
+{
+  #keys: '3[409348.0.72261014][409348.0.72261013][409348.0.72261015]'
+  Description: '(Dummy)'
+  ValueType: Duration
+}

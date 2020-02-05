@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Length
+{
+  #keys: '3[409348.0.35710961][409348.0.35710960][409348.0.35710962]'
+  Description: 'Length of an order'
+  ValueType: Number
+}

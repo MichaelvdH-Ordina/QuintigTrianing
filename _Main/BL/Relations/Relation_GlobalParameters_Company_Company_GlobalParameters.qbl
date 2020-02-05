@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: #root
+Relation GlobalParameters_Company_Company_GlobalParameters
+{
+  #keys: '1[409348.0.52475433]'
+  DefaultRelationStrategy
+  {
+  }
+  RelationSide.LeftSide Company
+  {
+    #keys: '3[409348.0.52475435][409348.0.52475434][409348.0.52475436]'
+    Cardinality: '0to1'
+    ObjectDefinition: GlobalParameters
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide GlobalParameters
+  {
+    #keys: '3[409348.0.52475438][409348.0.52475437][409348.0.52475439]'
+    Cardinality: '0to1'
+    ObjectDefinition: Company
+    OwningSide: 'Owned'
+  }
+}

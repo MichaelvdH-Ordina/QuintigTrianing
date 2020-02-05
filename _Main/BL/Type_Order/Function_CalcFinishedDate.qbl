@@ -1,0 +1,19 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcFinishedDate
+{
+  Description: 'Determine the end time of the order'
+  TextBody:
+  [*
+    // mho23702 Feb-4-2020 (created)
+    
+    value := guard ( max( this,
+                          Operation.Task,
+                          task, 
+                          task.Operation().IsPlanned(), 
+                          task.End().Date() )
+                     , Date::MinDate() );
+    
+    this.FinishedDate( value );
+  *]
+}

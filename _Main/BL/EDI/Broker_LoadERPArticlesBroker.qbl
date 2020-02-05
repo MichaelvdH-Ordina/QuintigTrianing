@@ -1,0 +1,44 @@
+Quintiq file version 2.0
+#parent: #root
+EDIBroker LoadERPArticlesBroker
+{
+  MDSDefinition: Company
+  TimeZone: 'ACT'
+  UseOSTimeZone: false
+  EDIModelLink.Destination Destination0
+  {
+    EDIMLTable ERPArticle
+    {
+      PrimaryKeyColumns: ArticleNo
+      TargetType: ERPArticle
+      TypeIndex: ERPArticleIndex
+      EDIMLColumn ArticleNo { Attribute: ArticleNo ValueType: String }
+      EDIMLColumn Length { Attribute: Length ValueType: Number }
+      EDIMLColumn Width { Attribute: Width ValueType: Real }
+    }
+  }
+  EDITransformation.Transformation Transformation
+  {
+    EDITableTransformation
+    {
+      InputTable: ERPArticle
+      OutputTable: ERPArticle
+      EDIColumnMatch { InputColumn: ArticleNo OutputColumn: ArticleNo }
+      EDIColumnMatch { InputColumn: Length OutputColumn: Length }
+      EDIColumnMatch { InputColumn: Width OutputColumn: Width }
+    }
+  }
+  EDIXLSLink.Source Source
+  {
+    FileName: 'QuiCoERP.xlsx'
+    EDIXLSLinkTable ERPArticle
+    {
+      Columns:
+      [
+        EDIXLSLinkColumn ArticleNo { ValueType: String }
+        EDIXLSLinkColumn Length { ValueType: Number }
+        EDIXLSLinkColumn Width { ValueType: Real }
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+Quintiq file version 2.0
+#parent: #root
+Method CreateMachines
+{
+  Description:
+  [*
+    Create the approriate machines for the company.
+    2 cutting, 3 folding and 1 packaging.
+  *]
+  TextBody:
+  [*
+    // mho23702 Jan-28-2020 (created)
+    Machine::Create( this, "CM1", "C" );
+    Machine::Create( this, "CM2", "C" );
+    Machine::Create( this, "FM-IV", "F" );
+    Machine::Create( this, "FM-IX", "F" );
+    Machine::Create( this, "FM-X", "F" );
+    Machine::Create( this, "PM", "P" );
+  *]
+}

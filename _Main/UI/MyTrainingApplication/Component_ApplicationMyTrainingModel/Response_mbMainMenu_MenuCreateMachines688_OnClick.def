@@ -1,0 +1,18 @@
+Quintiq file version 2.0
+#parent: mbMainMenu/MenuCreateMachines688
+Response OnClick () id:Response_mbMainMenu_MenuCreateMachines688_OnClick
+{
+  #keys: '[409348.0.2883948]'
+  Body:
+  [*
+    //Create machines
+    Company.CreateMachines();
+  *]
+  DefinitionID: 'Responsedef_Menu_OnClick'
+  Precondition:
+  [*
+    value := Company.Machine( relsize ) = 0;
+    FeedbackObject::AddHard( value, 'Machines already exist.' );
+    return value;
+  *]
+}

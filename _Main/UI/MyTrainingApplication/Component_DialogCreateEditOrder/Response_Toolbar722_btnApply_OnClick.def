@@ -1,0 +1,12 @@
+Quintiq file version 2.0
+#parent: Toolbar722/btnApply
+Response OnClick () id:Response_Toolbar722_btnApply_OnClick
+{
+  #keys: '[409348.0.72252898]'
+  Body:
+  [*
+    Dialog.ApplyChanges();
+    Dialog.Data().Commit();
+  *]
+  DefinitionID: 'Responsedef_GUIButtonBase_OnClick'
+}

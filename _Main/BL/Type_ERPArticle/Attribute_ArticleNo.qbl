@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute ArticleNo
+{
+  #keys: '3[409348.0.64651107][409348.0.64651106][409348.0.64651108]'
+  IsReadOnly: true
+  ValueType: String
+}

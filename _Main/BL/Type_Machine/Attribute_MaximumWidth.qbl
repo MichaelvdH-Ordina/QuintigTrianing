@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute MaximumWidth
+{
+  #keys: '3[409348.0.35700090][409348.0.35700089][409348.0.35700091]'
+  Description: 'Max width (cm) machine is able to process'
+  ValueType: Number
+}

@@ -1,0 +1,41 @@
+Quintiq file version 2.0
+#root
+#parent: MyTrainingApplication
+OrphanComponent FormMachines
+{
+  #keys: '[409348.0.6313447]'
+  BaseType: 'Form'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 128 id: 464 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => ListMachine
+        Position { startcolumn: 464 startrow: 211 endcolumn: 464 endrow: 211 }
+      }
+    ]
+    Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 128 id: 211 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: ListMachine
+  ]
+  Properties:
+  [
+    Height: 474
+    Image: 'GEAR'
+    IncludeInView: true
+    Title: 'Machines'
+    Width: 576
+  ]
+}

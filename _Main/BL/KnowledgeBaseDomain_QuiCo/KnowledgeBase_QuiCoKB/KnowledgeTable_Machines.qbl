@@ -1,0 +1,76 @@
+Quintiq file version 2.0
+#parent: #root
+KnowledgeTable Machines
+{
+  #keys: '6[409348.0.35710750][409348.0.35710747][0.0.0][409348.0.35710748][0.0.0][409348.0.35710749]'
+  Description: 'List of machines with properties'
+  EnforceColumnOrder: true
+  TableRuleAllowedRange MaxWidthRange
+  {
+    TargetColumn: MaximumWidth
+    TableRuleInterval
+    {
+      LeftValue: '1'
+      RightValue: '2147483647'
+      ValueType: Number
+    }
+  }
+  TableRuleAllowedValues AllowedTypes
+  {
+    TargetColumn: Type
+    TableRuleExplicitValue
+    {
+      Value: 'C'
+      ValueType: String
+    }
+    TableRuleExplicitValue
+    {
+      Value: 'F'
+      ValueType: String
+    }
+    TableRuleExplicitValue
+    {
+      Value: 'P'
+      ValueType: String
+    }
+  }
+  TableRuleUnique UniqueName
+  {
+    ColumnList: Name
+  }
+  TableRuleValues TrueValueEntered
+  {
+    ColumnList: 'Name, Type, Speed, MaximumWidth'
+  }
+  ColumnDefinitions:
+  [
+    Column Name
+    {
+      ColumnWeight: 1
+      Description: 'Name of the machine'
+      ISODefaultValue: '*'
+      Type: String
+    }
+    Column Type
+    {
+      ColumnWeight: 1
+      Description: 'Type of the machine (C, F or P).'
+      ISODefaultValue: '*'
+      Type: String
+    }
+    Column Speed
+    {
+      ColumnWeight: 1
+      Description: 'Speed of the machine.'
+      ISODefaultValue: '*'
+      Type: Number
+    }
+    Column MaximumWidth
+    {
+      ColumnWeight: 1
+      Description: 'Maximum width (cm)  a machine can process'
+      ISODefaultValue: '*'
+      Type: Number
+    }
+  ]
+}

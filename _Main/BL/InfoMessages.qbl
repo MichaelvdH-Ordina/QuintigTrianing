@@ -1,0 +1,33 @@
+Quintiq file version 2.0
+#parent: #root
+InfoMessages id:#InfoMessages #extension
+{
+  InfoMessage Feedback_CheckMaxWidth (const Operation operation, const Machine machine)
+  {
+    DefaultText: 'The width of order @operation.Order.OrderNr()@ is too big for machine @machine.Name()@.'
+  }
+  InfoMessage Feedback_CheckOperationPlanned (const Operation operation)
+  {
+    DefaultText: 'Operation @operation.OperationType()@ is not yet planned.'
+  }
+  InfoMessage Feedback_CheckOperationType (const Operation operation, const Machine machine)
+  {
+    DefaultText: 'Operation of type @operation.OperationType()@ is not allowed on machines of type @machine.OperationType()@.'
+  }
+  InfoMessage Feedback_CheckOperationUnplanned (const Operation operation)
+  {
+    DefaultText: 'This operation of type @operation.OperationType()@ is already planned.'
+  }
+  InfoMessage Feedback_CheckOperationsUnplanned (Operations operations)
+  {
+    DefaultText: 'All selected operations are already planned.'
+  }
+  InfoMessage Feedback_CheckOrderPlanned (const Order order)
+  {
+    DefaultText: 'Order @order.OrderNr()@ is not yet planned.'
+  }
+  InfoMessage Feedback_CheckOrderUnplanned (const Order order)
+  {
+    DefaultText: 'Order @order.OrderNr()@ is already planned.'
+  }
+}

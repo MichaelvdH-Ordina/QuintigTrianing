@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute OperationType
+{
+  #keys: '3[409348.0.2831156][409348.0.2831155][409348.0.2831157]'
+  Description: "Only 'C','F' of 'P'"
+  ValueType: String
+}

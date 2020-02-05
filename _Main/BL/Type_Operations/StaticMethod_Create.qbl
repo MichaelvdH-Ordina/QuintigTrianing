@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Create (Order owner, String operationtype) as Operation
+{
+  Description: 'Create an operation'
+  TextBody:
+  [*
+    // mho23702 Jan-28-2020 (created)
+    result := owner.AddLast( construct( Operation,
+                                        OperationType := operationtype ) );
+    return result;
+  *]
+}

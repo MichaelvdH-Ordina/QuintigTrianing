@@ -1,0 +1,19 @@
+Quintiq file version 2.0
+#root
+#parent: MyTrainingApplication
+OrphanComponent frmStandardAnalysis1
+{
+  #keys: '[104128.0.184066673]'
+  BaseType: 'frmStandardAnalysis'
+  Children:
+  [
+    #child: swTopMost
+  ]
+  Properties:
+  [
+    Height: 802
+    Image: 'HORIZONTALBARCHART'
+    Width: 1608
+    WindowState: 'maximized'
+  ]
+}

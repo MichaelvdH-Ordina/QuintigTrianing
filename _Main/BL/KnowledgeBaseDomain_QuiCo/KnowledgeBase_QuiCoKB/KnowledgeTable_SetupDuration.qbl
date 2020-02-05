@@ -1,0 +1,32 @@
+Quintiq file version 2.0
+#parent: #root
+KnowledgeTable SetupDuration
+{
+  #keys: '6[409348.0.35711114][409348.0.35711111][0.0.0][409348.0.35711112][0.0.0][409348.0.35711113]'
+  Description: 'Info on the setup duration between tasks'
+  EnforceColumnOrder: true
+  ColumnDefinitions:
+  [
+    Column Machine
+    {
+      ColumnWeight: 1
+      Description: 'Machine name'
+      ISODefaultValue: '*'
+      Type: String
+    }
+    Column LengthDifference
+    {
+      ColumnWeight: 1
+      Description: 'Difference in length between tasks (cm)'
+      ISODefaultValue: '*'
+      Type: Number
+    }
+    Column SetupDuration
+    {
+      ColumnWeight: 1
+      Description: 'Duration of setup'
+      ISODefaultValue: '*'
+      Type: Duration
+    }
+  ]
+}

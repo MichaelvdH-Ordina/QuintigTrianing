@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Type AllowedOnMachine
+{
+  #keys: '5[409348.0.69704792][409348.0.69704790][0.0.0][409348.0.69704791][409348.0.69704793]'
+  BaseType: Object
+  Description: 'Check if an operation is a allowed on a machine'
+  StructuredName: 'AllowedOnMachines'
+}

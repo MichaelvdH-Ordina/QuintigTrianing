@@ -1,0 +1,18 @@
+Quintiq file version 2.0
+#parent: ListOperation
+Response OnClick (structured[Operation] selection) id:Response_ListOperation_MenuPlanOperation_OnClick
+{
+  #keys: '[409348.0.24954292]'
+  Body:
+  [*
+    // Call Plan function
+    Operation::Plan( selection );
+  *]
+  CanBindMultiple: false
+  DefinitionID => /ListOperation/Responsedef_ListOperation_Menu_OnClick
+  Initiator: 'MenuPlanOperation'
+  Precondition:
+  [*
+    Operation::IsAllowedPlan( selection );
+  *]
+}

@@ -1,0 +1,26 @@
+Quintiq file version 2.0
+#parent: #root
+TableFunction CalcSpeed
+{
+  DefaultOutputFunction:
+  [*
+    // mho23702 Feb-3-2020 (created)
+    
+    value := 100;
+    this.Speed( value );
+  *]
+  OutputFunction:
+  [*
+    // mho23702 Feb-3-2020 (created)
+    
+    value := Speed;
+    this.Speed( value );
+  *]
+  TableDefinition: Machines
+  FunctionColumnMatch
+  {
+    ColumnDefinition: Name
+    MatchExpression: 'this.Name()'
+    Operator: '='
+  }
+}

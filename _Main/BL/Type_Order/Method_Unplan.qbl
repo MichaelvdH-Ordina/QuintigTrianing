@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+Method Unplan
+{
+  Description: 'Unplans all operations from the operation'
+  TextBody:
+  [*
+    // mho23702 Feb-3-2020 (created)
+    traverse( this, Operation, operation)
+    {
+      operation.Unplan();
+    }
+  *]
+}

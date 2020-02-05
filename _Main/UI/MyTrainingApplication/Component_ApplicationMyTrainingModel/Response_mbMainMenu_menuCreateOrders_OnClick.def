@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: mbMainMenu/menuCreateOrders
+Response OnClick () id:Response_mbMainMenu_menuCreateOrders_OnClick
+{
+  #keys: '[2436.0.7645526]'
+  Body:
+  [*
+    // Create test data
+    Company.CreateData();
+  *]
+  DefinitionID: 'Responsedef_Menu_OnClick'
+  Precondition:
+  [*
+    Company.CreateDataAllowed( feedback )
+  *]
+}

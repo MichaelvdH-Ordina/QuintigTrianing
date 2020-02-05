@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: ListOrder
+Response OnClick (Order selection) id:Response_ListOrder_MenuEditOrder211_OnClick
+{
+  #keys: '[409348.0.74655997]'
+  Body:
+  [*
+    
+    
+    dlg := construct( DialogCreateEditOrderWizard );
+    dlg.Edit( this, selection );
+  *]
+  CanBindMultiple: false
+  DefinitionID => /ListOrder/Responsedef_ListOrder_Menu_OnClick
+  Initiator: 'MenuEditOrder211'
+}

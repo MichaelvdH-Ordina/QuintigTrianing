@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute EndOfLastTask
+{
+  #keys: '3[409348.0.22400034][409348.0.22400033][409348.0.22400035]'
+  Description: 'Time when machine runs out of work'
+  ValueType: DateTime
+}

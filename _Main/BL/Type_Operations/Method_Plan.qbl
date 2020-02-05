@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+Method Plan () as Task
+{
+  Description: 'Plan an operation on the first available machine'
+  TextBody:
+  [*
+    // mho23702 Feb-3-2020 (created)
+    machine := this.SelectMachine();
+    result := this.PlanOn( machine, machine.Last() );
+    
+    return result;
+  *]
+}

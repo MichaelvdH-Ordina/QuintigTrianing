@@ -1,0 +1,21 @@
+Quintiq file version 2.0
+#parent: #root
+Method Plan
+{
+  Description: 'Plan all operations of the order'
+  TextBody:
+  [*
+    // mho23702 Feb-3-2020 (created)
+    /*traverse( this, Operation, operation, not operation.IsPlanned())
+    {
+      operation.Plan();
+    }*/
+    
+    operations := selectset( this,
+                             Operation,
+                             operation,
+                             not operation.IsPlanned() );
+    
+    Operation::Plan( operations );
+  *]
+}

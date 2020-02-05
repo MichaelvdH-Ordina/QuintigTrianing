@@ -1,0 +1,133 @@
+Quintiq file version 2.0
+Component ListOperation
+{
+  #keys: '[409348.0.6353079]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles622
+    Component popupList477
+    {
+      #keys: '[409348.0.6353083]'
+      BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuSeparator290 { #keys: '[409348.0.6353098]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuNewOperation { #keys: '[409348.0.6353099]' BaseType: 'Menu' Properties: [ Image: 'NEW' Shortcut: 'Ins' Text: '&New...' ] }
+            Component MenuEditOperation { #keys: '[409348.0.6353100]' BaseType: 'Menu' Properties: [ BindDoubleClick: true Image: 'EDITOBJECT' Shortcut: 'Enter' Text: '&Edit...' ] }
+            Component MenuDeleteOperation { #keys: '[409348.0.6353101]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Shortcut: 'Del' Text: '&Delete' ] }
+            Component MenuUnplanOperation { #keys: '[409348.0.14462337]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_DELETE' Shortcut: 'Alt+U' Text: 'Unplan' ] }
+            Component MenuSeparator796 { #keys: '[409348.0.14472666]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuPlanOperation { #keys: '[409348.0.24954291]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_ADD' Shortcut: 'Alt+P' Text: 'Plan' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+              c: MenuSeparator290
+              c: MenuPlanOperation
+              c: MenuUnplanOperation
+              c: MenuSeparator796
+              c: MenuNewOperation
+              c: MenuEditOperation
+              c: MenuDeleteOperation
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        PosX: 35
+        PosY: 60
+      ]
+    }
+    Component GUIDataExtractor881
+    {
+      #keys: '[409348.0.6353085]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        Component: 'ListOrder'
+        DataType: 'Order'
+        PosX: 5
+        PosY: 30
+        Transformation: 'Operation'
+      ]
+    }
+    Component GUIDataSetLevel843
+    {
+      #keys: '[409348.0.6353086]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        Columns: 'OperationColumns'
+        DataExtractor: 'GUIDataExtractor881'
+        PosX: 35
+        PosY: 30
+        SortCriteria: "datamember:'OperationType';datamember:'Order.OrderNr'"
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupList477'
+    FullRowSelect: true
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles622
+      c: popupList477
+      c: GUIDataExtractor881
+      c: GUIDataSetLevel843
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOperation_Menu_OnClick
+    {
+      #keys: '[409348.0.6353087]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[27.0.1843036]'
+          Binding: 'this.Selection()'
+        }
+        ResponseDefinitionArgument masterselection
+        {
+          #keys: '[27.0.1843596]'
+          Binding: 'ListOrder.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOperation_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.6353088]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[27.0.1843081]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

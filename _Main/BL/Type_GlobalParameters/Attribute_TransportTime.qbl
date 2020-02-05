@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute TransportTime
+{
+  #keys: '3[409348.0.52475445][409348.0.52475444][409348.0.52475446]'
+  Description: 'Time to transport between machines.'
+  ValueType: Duration
+}

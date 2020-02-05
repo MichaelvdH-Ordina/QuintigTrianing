@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: ListOrder
+Response OnClick (Order selection) id:Response_ListOrder_MenuDeleteOrder_OnClick
+{
+  #keys: '[409348.0.6353096]'
+  Body:
+  [*
+    // Delete a Order
+    if ( MessageBox::Question( this, 'Are you sure you want to delete the selected Order?', '&Yes|&No' ) = 0 )
+    {
+      selection.Delete();
+    }
+  *]
+  DefinitionID => /ListOrder/Responsedef_ListOrder_Menu_OnClick
+  Initiator: 'MenuDeleteOrder'
+}

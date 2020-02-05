@@ -1,0 +1,41 @@
+Quintiq file version 2.0
+#root
+#parent: MyTrainingApplication
+OrphanComponent FormOrders
+{
+  #keys: '[409348.0.6347656]'
+  BaseType: 'Form'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 128 id: 616 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => SplitterWndOrder_Operation
+        Position { startcolumn: 616 startrow: 590 endcolumn: 616 endrow: 590 }
+      }
+    ]
+    Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 128 id: 590 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: SplitterWndOrder_Operation
+  ]
+  Properties:
+  [
+    Height: 785
+    Image: 'SHOPPINGCART_FULL'
+    IncludeInView: true
+    Title: 'Orders & Operations'
+    Width: 1591
+  ]
+}

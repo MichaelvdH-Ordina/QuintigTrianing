@@ -1,0 +1,18 @@
+Quintiq file version 2.0
+#parent: #root
+Method SelectMachine () as Machine
+{
+  Description: 'Select the machine that is available first'
+  TextBody:
+  [*
+    // mho23702 Feb-3-2020 (created)
+    result := minselect( this,
+                         Order.Company.Machine,
+                         machine,
+                         machine.OperationType() = this.OperationType() 
+                         and this.Order().Width() <= machine.MaximumWidth(),
+                         machine.EndOfLastTask() );
+    
+    return result;
+  *]
+}

@@ -1,0 +1,17 @@
+Quintiq file version 2.0
+#parent: #root
+Method Unplan
+{
+  Description: 'Unplans an already plannend operation'
+  TextBody:
+  [*
+    // mho23702 Jan-30-2020 (created)
+    task := this.Task();
+    
+    if( this.IsPlanned() = true )
+    {
+      this.IsPlanned( false );
+      task.Delete();
+    }
+  *]
+}

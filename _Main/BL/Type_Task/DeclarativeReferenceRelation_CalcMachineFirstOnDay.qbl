@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: #root
+DeclarativeReferenceRelation CalcMachineFirstOnDay
+{
+  #keys: '1[409348.0.67132417]'
+  Description: 'Returns the machine when the start date of a task is different then the previous'
+  Expression:
+  [*
+    // Random text
+    result := null( Machine );
+    
+    firstonday := guard( this.Start().Date() <> this.Previous().Start().Date(),
+                              true );
+    
+    if( firstonday )
+    {
+      result := this.Machine();
+    }
+    
+    return result;
+  *]
+  Relation: MachineFirstOnDay
+}

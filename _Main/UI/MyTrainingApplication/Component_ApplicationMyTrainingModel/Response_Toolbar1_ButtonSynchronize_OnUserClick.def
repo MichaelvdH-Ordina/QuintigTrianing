@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: Toolbar1/ButtonSynchronize
+Response OnUserClick () id:Response_Toolbar1_ButtonSynchronize_OnUserClick
+{
+  #keys: '[409348.0.64619886]'
+  Body:
+  [*
+    // Sync the data 
+    Company.Synchronize();
+  *]
+  CanBindMultiple: false
+  DefinitionID: 'Responsedef_GUIButtonBase_OnUserClick'
+}

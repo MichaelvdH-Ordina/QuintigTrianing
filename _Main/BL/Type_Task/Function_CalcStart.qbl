@@ -1,0 +1,25 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcStart
+{
+  TextBody:
+  [*
+    // mho23702 Jan-30-2020 (created)
+    now := this.Machine().Company().Time();
+    
+    prevtaskend := guard( this.Previous().End(), now );
+    prevoperationend := guard( this.Operation().Previous().Task().End(), now );
+    earlieststart := this.Operation().EarliestStart();
+    planningstart := now;
+    
+    
+    value := maxvalue( prevtaskend, 
+                       prevoperationend,
+                       earlieststart,
+                       planningstart );
+    
+    value := this.Machine().MachineCalendar().NextAvailable( value );
+    
+    this.Start( value );
+  *]
+}

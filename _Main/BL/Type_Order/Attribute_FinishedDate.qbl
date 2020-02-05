@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute FinishedDate
+{
+  #keys: '3[409348.0.46200026][409348.0.46200025][409348.0.46200027]'
+  Description: 'Moment an order is finished.'
+  ValueType: Date
+}

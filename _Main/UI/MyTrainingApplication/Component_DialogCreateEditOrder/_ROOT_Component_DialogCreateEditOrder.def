@@ -1,0 +1,152 @@
+Quintiq file version 2.0
+#root
+#parent: MyTrainingApplication
+OrphanComponent DialogCreateEditOrder
+{
+  #keys: '[409348.0.72252894]'
+  BaseType: 'Dialog'
+  Databinding: 'shadow[Order]'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 0 id: 331 parent: 0 }
+      GBFlow.Column { grow: 0 id: 292 parent: 0 }
+      GBFlow.Column { grow: 128 id: 578 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => Editor850
+        Position { startcolumn: 292 startrow: 462 endcolumn: 578 endrow: 462 }
+      }
+      GBElement
+      {
+        Component => Editor113
+        Position { startcolumn: 292 startrow: 532 endcolumn: 578 endrow: 532 }
+      }
+      GBElement
+      {
+        Component => Editor367
+        Position { startcolumn: 292 startrow: 270 endcolumn: 578 endrow: 270 }
+      }
+      GBElement
+      {
+        Component => GUIDurationSelector123
+        Position { startcolumn: 292 startrow: 909 endcolumn: 292 endrow: 909 }
+      }
+      GBElement
+      {
+        Component => Label218
+        Position { startcolumn: 331 startrow: 462 endcolumn: 331 endrow: 462 }
+      }
+      GBElement
+      {
+        Component => Label371
+        Position { startcolumn: 331 startrow: 532 endcolumn: 331 endrow: 532 }
+      }
+      GBElement
+      {
+        Component => Label453
+        Position { startcolumn: 331 startrow: 270 endcolumn: 331 endrow: 270 }
+      }
+      GBElement
+      {
+        Component => Label235
+        Position { startcolumn: 331 startrow: 909 endcolumn: 331 endrow: 909 }
+      }
+    ]
+    Gaps: [ left: 10 right: 10 top: 10 bottom: 10 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 0 id: 462 parent: 0 }
+      GBFlow.Row { grow: 0 id: 532 parent: 0 }
+      GBFlow.Row { grow: 0 id: 270 parent: 0 }
+      GBFlow.Row { grow: 0 id: 909 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: Toolbar722
+    #child: Editor850
+    #child: Editor113
+    #child: Editor367
+    Component GUIDurationSelector123
+    {
+      #keys: '[409348.0.72257439]'
+      BaseType: 'GUIDurationSelector'
+      Properties:
+      [
+        BackgroundColor: 'Window'
+        DataBinding: 'Dialog.Data.DeliveryBuffer'
+      ]
+    }
+    Component Label218
+    {
+      #keys: '[409348.0.72258080]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Customer Name'
+        Transparent: true
+      ]
+    }
+    Component Label371
+    {
+      #keys: '[409348.0.72258164]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Order Number'
+        Transparent: true
+      ]
+    }
+    Component Label453
+    {
+      #keys: '[409348.0.72258230]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Quantity'
+        Transparent: true
+      ]
+    }
+    Component Label235
+    {
+      #keys: '[409348.0.72258275]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Delivery buffer'
+        Transparent: true
+      ]
+    }
+  ]
+  Properties:
+  [
+    EnterButton: 'btnOk'
+    EscapeButton: 'btnCancel'
+    Height: 209
+    InitialPlacement: 'floating'
+    Title: 'Create/Edit Order'
+    Width: 275
+    ModeledStringList ChildOrdering
+    {
+      c: Toolbar722
+      c: Editor850
+      c: Editor113
+      c: Editor367
+      c: GUIDurationSelector123
+      c: Label218
+      c: Label371
+      c: Label453
+      c: Label235
+    }
+  ]
+}

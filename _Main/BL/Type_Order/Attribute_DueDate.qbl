@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute DueDate
+{
+  #keys: '3[409348.0.2800120][409348.0.2800119][409348.0.2800121]'
+  Description: 'The due date for an order'
+  ValueType: Date
+}

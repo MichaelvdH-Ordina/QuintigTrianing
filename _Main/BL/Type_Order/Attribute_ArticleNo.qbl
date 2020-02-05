@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute ArticleNo
+{
+  #keys: '3[409348.0.69731034][409348.0.69731033][409348.0.69731035]'
+  Description: 'Article number from the dataset'
+  ValueType: String
+}

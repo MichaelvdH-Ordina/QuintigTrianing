@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: ListOperation
+Response OnClick (Operation selection) id:Response_ListOperation_MenuDeleteOperation_OnClick
+{
+  #keys: '[409348.0.6353104]'
+  Body:
+  [*
+    // Delete a Operation
+    if ( MessageBox::Question( this, 'Are you sure you want to delete the selected Operation?', '&Yes|&No' ) = 0 )
+    {
+      selection.Delete();
+    }
+  *]
+  DefinitionID => /ListOperation/Responsedef_ListOperation_Menu_OnClick
+  Initiator: 'MenuDeleteOperation'
+}

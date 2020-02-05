@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: #root
+Method CheckOperationType (Operation operation) as Boolean
+{
+  Description: 'Check if the operation type to be planned equals that of the machine'
+  TextBody:
+  [*
+    // mho23702 Feb-3-2020 (created)
+    value := this.OperationType() = operation.OperationType();
+    
+    return value;
+  *]
+}

@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: #root
+Relation Company_ERPArticle_ERPArticle_Company
+{
+  #keys: '1[409348.0.64651099]'
+  DefaultRelationStrategy
+  {
+  }
+  RelationSide.LeftSide ERPArticle
+  {
+    #keys: '3[409348.0.64651101][409348.0.64651100][409348.0.64651102]'
+    Cardinality: '1toN'
+    ObjectDefinition: Company
+    OwningSide: 'Owned'
+  }
+  RelationSide.RightSide Company
+  {
+    #keys: '3[409348.0.64651104][409348.0.64651103][409348.0.64651105]'
+    Cardinality: '0to1'
+    ObjectDefinition: ERPArticle
+    OwningSide: 'Reference'
+  }
+}

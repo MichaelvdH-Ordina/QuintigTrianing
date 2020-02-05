@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: #root
+DeclarativeTypeIndexRelation CalcERPArticle
+{
+  #keys: '1[409348.0.69703079]'
+  Relation: ERPArticle
+  TypeIndex: ERPArticleIndex
+  TypeIndexExpressions:
+  [
+    DeclarativeRelationTypeIndexExpression
+    {
+      #keys: '1[409348.0.69703080]'
+      TypeIndexExpression: 'this.ArticleNo()'
+    }
+  ]
+}

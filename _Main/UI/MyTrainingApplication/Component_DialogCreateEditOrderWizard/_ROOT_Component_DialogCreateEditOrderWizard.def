@@ -1,0 +1,186 @@
+Quintiq file version 2.0
+#root
+#parent: MyTrainingApplication
+OrphanComponent DialogCreateEditOrderWizard
+{
+  #keys: '[409348.0.74687464]'
+  BaseType: 'Dialog'
+  Databinding: 'shadow[Order]'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 0 id: 495 parent: 0 }
+      GBFlow.Column { grow: 0 id: 518 parent: 0 }
+      GBFlow.Column { grow: 128 id: 499 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => Label122
+        Position { startcolumn: 495 startrow: 107 endcolumn: 495 endrow: 107 }
+      }
+      GBElement
+      {
+        Component => Label674
+        Position { startcolumn: 495 startrow: 676 endcolumn: 495 endrow: 676 }
+      }
+      GBElement
+      {
+        Component => Label799
+        Position { startcolumn: 495 startrow: 216 endcolumn: 495 endrow: 216 }
+      }
+      GBElement
+      {
+        Component => EditorOrderNr
+        Position { startcolumn: 518 startrow: 107 endcolumn: 499 endrow: 107 }
+      }
+      GBElement
+      {
+        Component => Label982
+        Position { startcolumn: 495 startrow: 749 endcolumn: 495 endrow: 749 }
+      }
+      GBElement
+      {
+        Component => EditorQuantity
+        Position { startcolumn: 518 startrow: 676 endcolumn: 499 endrow: 676 }
+      }
+      GBElement
+      {
+        Component => GUIDateSelectorDueDate
+        Position { startcolumn: 518 startrow: 216 endcolumn: 518 endrow: 216 }
+      }
+      GBElement
+      {
+        Component => Label850
+        Position { startcolumn: 495 startrow: 589 endcolumn: 495 endrow: 589 }
+      }
+      GBElement
+      {
+        Component => GUIDurationSelectorDeliveryBuffer
+        Position { startcolumn: 518 startrow: 749 endcolumn: 518 endrow: 749 }
+      }
+      GBElement
+      {
+        Component => EditorCustomerName
+        Position { startcolumn: 518 startrow: 589 endcolumn: 499 endrow: 589 }
+      }
+    ]
+    Gaps: [ left: 10 right: 10 top: 10 bottom: 10 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 0 id: 107 parent: 0 }
+      GBFlow.Row { grow: 0 id: 676 parent: 0 }
+      GBFlow.Row { grow: 0 id: 216 parent: 0 }
+      GBFlow.Row { grow: 0 id: 749 parent: 0 }
+      GBFlow.Row { grow: 0 id: 589 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: EditorOrderNr
+    Component Label122
+    {
+      #keys: '[409348.0.74687469]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: '#Order'
+        Transparent: true
+      ]
+    }
+    #child: EditorQuantity
+    Component Label674
+    {
+      #keys: '[409348.0.74687473]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Quantity'
+        Transparent: true
+      ]
+    }
+    Component GUIDateSelectorDueDate
+    {
+      #keys: '[409348.0.74687474]'
+      BaseType: 'GUIDateSelector'
+      Properties:
+      [
+        BackgroundColor: 'Window'
+        DataBinding: 'Dialog.Data.DueDate'
+        Date: 2020-02-05
+      ]
+    }
+    Component Label799
+    {
+      #keys: '[409348.0.74687475]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Due date'
+        Transparent: true
+      ]
+    }
+    Component GUIDurationSelectorDeliveryBuffer
+    {
+      #keys: '[409348.0.74687476]'
+      BaseType: 'GUIDurationSelector'
+      Properties:
+      [
+        BackgroundColor: 'Window'
+        DataBinding: 'Dialog.Data.DeliveryBuffer'
+      ]
+    }
+    Component Label982
+    {
+      #keys: '[409348.0.74687477]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Delivery buffer'
+        Transparent: true
+      ]
+    }
+    #child: EditorCustomerName
+    Component Label850
+    {
+      #keys: '[409348.0.74687481]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Customer name'
+        Transparent: true
+      ]
+    }
+    #child: Toolbar231
+  ]
+  Properties:
+  [
+    EnterButton: 'btnOk'
+    EscapeButton: 'btnCancel'
+    Height: 237
+    Title: 'DialogCreateEditOrderWizard'
+    Width: 296
+    ModeledStringList ChildOrdering
+    {
+      c: EditorOrderNr
+      c: EditorQuantity
+      c: Label122
+      c: GUIDateSelectorDueDate
+      c: GUIDurationSelectorDeliveryBuffer
+      c: EditorCustomerName
+      c: Label674
+      c: Label799
+      c: Label982
+      c: Label850
+      c: Toolbar231
+    }
+  ]
+}

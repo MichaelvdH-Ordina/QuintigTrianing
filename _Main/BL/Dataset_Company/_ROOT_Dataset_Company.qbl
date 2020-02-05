@@ -1,0 +1,9 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Dataset Company
+{
+  #keys: '2[409348.0.12010101][409348.0.12010100]'
+  DefaultMDSName: 'Company'
+  InstanceType: Company
+}

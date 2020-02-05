@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Time
+{
+  #keys: '3[409348.0.12010019][409348.0.12010018][409348.0.12010020]'
+  Description: 'The current time'
+  ValueType: DateTime
+}

@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: GanttChartTask
+Response OnDrawNode (Task element) id:Response_GanttChartTask_OnDrawNode
+{
+  #keys: '[409348.0.35754195]'
+  Body:
+  [*
+    // Draw setup duration yellow.
+    drawinfo.AddCompartment( Color::Yellow(), element.SetupDuration());
+  *]
+  CanBindMultiple: false
+  DefinitionID: 'Responsedef_GanttChart_OnDrawNode'
+}

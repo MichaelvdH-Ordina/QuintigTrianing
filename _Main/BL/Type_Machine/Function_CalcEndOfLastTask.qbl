@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcEndOfLastTask
+{
+  TextBody:
+  [*
+    // mho23702 Feb-3-2020 (created)
+    now := this.Company().Time();
+    
+    value := guard( this.Last().End(), now );
+    
+    this.EndOfLastTask( value );
+  *]
+}

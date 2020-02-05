@@ -1,0 +1,86 @@
+Quintiq file version 2.0
+#root
+#parent: MyTrainingApplication
+OrphanComponent FormGantt
+{
+  #keys: '[409348.0.12063151]'
+  BaseType: 'Form'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 128 id: 886 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => GanttChartTask
+        Position { startcolumn: 886 startrow: 831 endcolumn: 886 endrow: 831 }
+      }
+      GBElement
+      {
+        Component => FilterPanel731
+        Position { startcolumn: 886 startrow: 343 endcolumn: 886 endrow: 343 }
+      }
+    ]
+    Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 0 id: 343 parent: 0 }
+      GBFlow.Row { grow: 128 id: 831 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: GanttChartTask
+    Component FilterPanel731
+    {
+      #keys: '[409348.0.51108052]'
+      BaseType: 'FilterPanel'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 803 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => PanelStoredFiltersToolbar
+            Position { startcolumn: 803 startrow: 470 endcolumn: 803 endrow: 470 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 0 id: 470 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: PanelStoredFiltersToolbar
+      ]
+      Properties:
+      [
+        Border: true
+      ]
+    }
+  ]
+  Properties:
+  [
+    Height: 785
+    Image: 'GANTTCHART'
+    IncludeInView: true
+    Title: 'Gantt chart'
+    Width: 1591
+    ModeledStringList ChildOrdering
+    {
+      c: GanttChartTask
+      c: FilterPanel731
+    }
+  ]
+}

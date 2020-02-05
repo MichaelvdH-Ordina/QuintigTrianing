@@ -1,0 +1,20 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Create (Company owner, Number ordernr, Number quantity, 
+  Date duedate, Number length, Number width, 
+  String artno) as Order
+{
+  Description: 'Create an order'
+  TextBody:
+  [*
+    // mho23702 Jan-28-2020 (created)
+    result := owner.Order( relnew,
+                           OrderNr := ordernr,
+                           Quantity := quantity,
+                           DueDate := duedate,
+                           Length := length,
+                           Width := width,
+                           ArticleNo := artno);                                                
+    return result;
+  *]
+}

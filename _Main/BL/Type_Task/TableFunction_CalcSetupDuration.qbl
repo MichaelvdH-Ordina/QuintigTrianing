@@ -1,0 +1,40 @@
+Quintiq file version 2.0
+#parent: #root
+TableFunction CalcSetupDuration
+{
+  DefaultOutputFunction:
+  [*
+    // mho23702 Feb-3-2020 (created)
+    
+    value := Duration::Zero();
+    this.SetupDuration( value );
+  *]
+  Description: 'Determine setup duration'
+  OutputFunction:
+  [*
+    // mho23702 Feb-3-2020 (created)
+    
+    value := SetupDuration;
+    this.SetupDuration( value );
+  *]
+  TableDefinition: SetupDuration
+  FunctionColumnMatch
+  {
+    ColumnDefinition: LengthDifference
+    MatchExpression: 'this.LengthDifference()'
+    Operator: '>'
+  }
+  FunctionColumnMatch
+  {
+    ColumnDefinition: Machine
+    MatchExpression: 'this.Machine().Name()'
+    Operator: '='
+  }
+  ScoreFunctions:
+  [
+    TableFunctionScore
+    {
+      ScoreExpression: '-LengthDifference'
+    }
+  ]
+}

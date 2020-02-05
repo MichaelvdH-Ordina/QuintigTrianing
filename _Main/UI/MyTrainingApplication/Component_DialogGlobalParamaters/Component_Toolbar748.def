@@ -1,0 +1,88 @@
+Quintiq file version 2.0
+Component Toolbar748
+{
+  #keys: '[409348.0.62253228]'
+  BaseType: 'Toolbar'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 128 id: 353 parent: 0 }
+      GBFlow.Column { grow: 0 id: 843 parent: 0 }
+      GBFlow.Column { grow: 0 id: 136 parent: 0 }
+      GBFlow.Column { grow: 0 id: 432 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => btnApply
+        Position { startcolumn: 843 startrow: 228 endcolumn: 843 endrow: 228 }
+      }
+      GBElement
+      {
+        Component => btnOk
+        Position { startcolumn: 136 startrow: 228 endcolumn: 136 endrow: 228 }
+      }
+      GBElement
+      {
+        Component => btnCancel
+        Position { startcolumn: 432 startrow: 228 endcolumn: 432 endrow: 228 }
+      }
+    ]
+    Gaps: [ left: 5 right: 5 top: 0 bottom: 0 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 0 id: 228 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    Component btnApply
+    {
+      #keys: '[409348.0.62253229]'
+      BaseType: 'Button'
+      Properties:
+      [
+        LayoutGroup: 'dlgButtons'
+        Shortcut: 'Alt+A'
+        Text: '&Apply'
+      ]
+    }
+    Component btnOk
+    {
+      #keys: '[409348.0.62253231]'
+      BaseType: 'Button'
+      Properties:
+      [
+        LayoutGroup: 'dlgButtons'
+        Shortcut: 'Alt+O'
+        Text: '&OK'
+      ]
+    }
+    Component btnCancel
+    {
+      #keys: '[409348.0.62253233]'
+      BaseType: 'Button'
+      Properties:
+      [
+        LayoutGroup: 'dlgButtons'
+        Shortcut: 'Alt+C'
+        Text: '&Cancel'
+      ]
+    }
+  ]
+  Properties:
+  [
+    Border: false
+    Location: 'bottom'
+    Size: 26
+    ModeledStringList ChildOrdering
+    {
+      c: btnApply
+      c: btnOk
+      c: btnCancel
+    }
+  ]
+}

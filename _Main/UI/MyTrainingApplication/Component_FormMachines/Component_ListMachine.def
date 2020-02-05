@@ -1,0 +1,94 @@
+Quintiq file version 2.0
+Component ListMachine
+{
+  #keys: '[409348.0.6315867]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles834
+    Component popupList355
+    {
+      #keys: '[409348.0.6315871]'
+      BaseType: 'popupList'
+      Properties:
+      [
+        PosX: 16
+        PosY: 273
+      ]
+    }
+    Component GUIDataExtractor425
+    {
+      #keys: '[409348.0.6315873]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        DataSet: 'Company'
+        DataType: 'Company'
+        PosX: 36
+        PosY: 220
+        Transformation: 'Machine'
+      ]
+    }
+    Component GUIDataSetLevel881
+    {
+      #keys: '[409348.0.6315874]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        Columns: 'MachineColumns1'
+        DataExtractor: 'GUIDataExtractor425'
+        PosX: 3
+        PosY: -1
+        SortCriteria: "datamember:'Name'"
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    BackgroundColor: 'Window'
+    Border: true
+    ContextMenu: 'popupList355'
+    FullRowSelect: true
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles834
+      c: popupList355
+      c: GUIDataExtractor425
+      c: GUIDataSetLevel881
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListMachine_Menu_OnClick
+    {
+      #keys: '[409348.0.6315875]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[27.0.1420554]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListMachine_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.6315876]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[27.0.1420599]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

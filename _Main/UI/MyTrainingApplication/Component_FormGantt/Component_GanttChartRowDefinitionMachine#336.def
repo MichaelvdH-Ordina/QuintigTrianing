@@ -1,0 +1,99 @@
+Quintiq file version 2.0
+Component GanttChartRowDefinitionMachine
+{
+  #keys: '[409348.0.12071790]'
+  BaseType: 'GanttChartRowDefinition'
+  Children:
+  [
+    Component GanttChartNodesDefinitionTask
+    {
+      #keys: '[409348.0.12071791]'
+      BaseType: 'GanttChartNodesDefinition'
+      Properties:
+      [
+        DrawingOrder: 1
+        Elements: 'Task'
+        Identification: 'Task'
+        Legend: 'VALUE(object.Name())'
+        NodeEndTime: 'object.End()'
+        NodeStartTime: 'object.Start()'
+        Nodes: 'Task'
+        PosX: 30
+        PosY: 30
+      ]
+    }
+    Component GanttChartNodesDefinitionCalendar
+    {
+      #keys: '[409348.0.46121223]'
+      BaseType: 'GanttChartNodesDefinition'
+      Children:
+      [
+        Component UserConfigurableInformation124
+        {
+          #keys: '[409348.0.46126822]'
+          BaseType: 'UserConfigurableInformation'
+          Properties:
+          [
+            ObjectBackgroundColor: 'Gray'
+            ObjectType: 'CalendarElement'
+            PosX: 39
+            PosY: 44
+          ]
+        }
+      ]
+      Properties:
+      [
+        DrawingOrder: 2
+        Elements: 'MachineCalendar.Elements'
+        Filter: 'object.Capacity() = 0'
+        Identification: 'CalendarElement'
+        MergeWith: 'GanttChartNodesDefinitionTask'
+        NodeEndTime:
+        [*
+          <?xml version="1.0" encoding="UTF-16"?>
+          <GEBExpression xmlns="http://www.quintiq.com/GEB/GEBExpression" Key="@NodeEndTime1" ResultType="Q1_1_141">
+            <Name>NodeEndTime</Name>
+            <GEBExpressionExpressionBody Key="@1">
+              <ExpressionText>object.End()</ExpressionText>
+              <Converter>
+              </Converter>
+            </GEBExpressionExpressionBody>
+          </GEBExpression>
+        *]
+        NodeStartTime:
+        [*
+          <?xml version="1.0" encoding="UTF-16"?>
+          <GEBExpression xmlns="http://www.quintiq.com/GEB/GEBExpression" Key="@NodeStartTime1" ResultType="Q1_1_141">
+            <Name>NodeStartTime</Name>
+            <GEBExpressionExpressionBody Key="@1">
+              <ExpressionText>object.Start()</ExpressionText>
+              <Converter>
+              </Converter>
+            </GEBExpressionExpressionBody>
+          </GEBExpression>
+        *]
+        Nodes: 'MachineCalendar.Elements'
+        Overlay: true
+        PosX: 32
+        PosY: 65
+        ThreeDimensional: false
+      ]
+    }
+  ]
+  Properties:
+  [
+    DataExtractor: 'GUIDataExtractor472'
+    DrawingOrder: 3
+    FilterArguments: 'dataholderselectedoperation:DataHolderSelectedOperation(Operation)'
+    Identification: 'Machine'
+    PosX: 157
+    PosY: 30
+    Relation: 'Machine'
+    SortCriteria: "datamember:'Name'"
+    ModeledStringList ChildOrdering
+    {
+      c: GanttChartNodesDefinitionTask
+      c: GanttChartNodesDefinitionCalendar
+    }
+  ]
+}

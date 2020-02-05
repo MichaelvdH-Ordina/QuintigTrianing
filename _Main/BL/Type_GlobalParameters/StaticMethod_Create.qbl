@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Create (Company owner) as GlobalParameters
+{
+  Description: 'Create global parameters'
+  TextBody:
+  [*
+    // mho23702 Feb-4-2020 (created)
+    
+    result := owner.GlobalParameters( relnew );
+    
+    return result;
+  *]
+}

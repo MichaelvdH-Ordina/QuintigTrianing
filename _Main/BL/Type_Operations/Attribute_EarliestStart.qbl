@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute EarliestStart
+{
+  #keys: '3[409348.0.54950008][409348.0.54950007][409348.0.54950009]'
+  Description: 'Gives the earliest time an operation can start, with respect to their predecessor.'
+  ValueType: DateTime
+}

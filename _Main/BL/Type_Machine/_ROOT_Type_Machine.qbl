@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Type Machine
+{
+  #keys: '5[409348.0.2831083][409348.0.2831081][0.0.0][409348.0.2831082][409348.0.2831084]'
+  BaseType: Object
+  Description: 'Machines to do the operations'
+  OnCreate:
+  [*
+    cal := this.MachineCalendar( relnew );
+    cal.KnowledgeBaseID( 'QuiCo::QuiCoKB' );
+    cal.AddPeriod( this.Company().Time(), 1.0, 'Working Hours' );
+  *]
+  StructuredName: 'Machines'
+}

@@ -1,0 +1,124 @@
+Quintiq file version 2.0
+#parent: #root
+Constraint OnTime
+{
+  #keys: '2[409348.0.46201332][409348.0.46201333]'
+  ConstraintXML:
+  [*
+    <?xml version="1.0" encoding="UTF-16"?>
+    <GEBConstraintElement xmlns="http://www.quintiq.com/GEB/GEBConstraintElement" Key="@OnTime1" TargetType="Order" ValueType="Boolean" ModelElement="Order.OnTime" TargetColumn="@OnTime2">
+      <Name>OnTime</Name>
+      <Description>Check if an order is finished before its due date</Description>
+      <DefinitionID>[409348.0.46201332]</DefinitionID>
+      <ConstraintKind>Soft</ConstraintKind>
+      <Priority>0</Priority>
+      <ConstraintText>Order @OrderNr@ is finished on @FinishedDate@, eventhough its due date is @DueDate@.</ConstraintText>
+      <GEBConstraintElementData Key="@1">
+        <DefaultColumnPrefix></DefaultColumnPrefix>
+        <ColumnPostfix></ColumnPostfix>
+        <GEBProcessColumn Key="@OnTime2" ElementType="Order" ValueType="Boolean">
+          <ColumnID>[409348.0.46201331]</ColumnID>
+          <BaseName>OnTime</BaseName>
+          <Name>OnTime</Name>
+          <Title>NewConstraint</Title>
+          <IsTarget>true</IsTarget>
+          <NameHasBeenSet>false</NameHasBeenSet>
+          <ColumnFinal>False</ColumnFinal>
+          <GEBDerivation Key="@2">
+            <GEBDerivationBase Key="@3" TargetType="Order">
+              <ColumnID>[409348.0.46201331]</ColumnID>
+              <GEBNodeDerivation Key="@4">
+                <Operation>FirstExpression</Operation>
+                <Conditional>false</Conditional>
+                <Multiple>false</Multiple>
+                <AllowWildcards>false</AllowWildcards>
+                <GEBNodeDerivationExpression Key="@5">
+                  <GEBNodeDerivationExpressionBody Key="@6">
+                    <ExpressionText>FinishedDate &lt;= DueDate;</ExpressionText>
+                    <Converter>
+                      <ZeroConverter Key="@7">
+                        <IsStandard>true</IsStandard>
+                        <IsISO>false</IsISO>
+                        <IsCustom>false</IsCustom>
+                        <ConversionType>0</ConversionType>
+                      </ZeroConverter>
+                    </Converter>
+                  </GEBNodeDerivationExpressionBody>
+                </GEBNodeDerivationExpression>
+              </GEBNodeDerivation>
+            </GEBDerivationBase>
+          </GEBDerivation>
+        </GEBProcessColumn>
+        <GEBSelectColumn Key="@OrderNr1" ElementType="Order" ValueType="Number">
+          <ColumnID>[409348.0.46320415]</ColumnID>
+          <BaseName>OrderNr</BaseName>
+          <Name>OrderNr</Name>
+          <Title>OrderNr</Title>
+          <IsTarget>false</IsTarget>
+          <NameHasBeenSet>false</NameHasBeenSet>
+          <ColumnFinal>Fail</ColumnFinal>
+          <AttributePathText>OrderNr</AttributePathText>
+          <AttributePathIdentifier>
+            <AttributePathIdentifier Key="@8" Attribute="Order.OrderNr">
+              <PathIdentifier>
+                <PathIdentifier Key="@9" StartType="Order">
+                  <Nodes>
+                  </Nodes>
+                </PathIdentifier>
+              </PathIdentifier>
+            </AttributePathIdentifier>
+          </AttributePathIdentifier>
+        </GEBSelectColumn>
+        <GEBSelectColumn Key="@DueDate1" ElementType="Order" ValueType="Date">
+          <ColumnID>[409348.0.46320413]</ColumnID>
+          <BaseName>DueDate</BaseName>
+          <Name>DueDate</Name>
+          <Title>DueDate</Title>
+          <IsTarget>false</IsTarget>
+          <NameHasBeenSet>false</NameHasBeenSet>
+          <ColumnFinal>Fail</ColumnFinal>
+          <AttributePathText>DueDate</AttributePathText>
+          <AttributePathIdentifier>
+            <AttributePathIdentifier Key="@10" Attribute="Order.DueDate">
+              <PathIdentifier>
+                <PathIdentifier Key="@11" StartType="Order">
+                  <Nodes>
+                  </Nodes>
+                </PathIdentifier>
+              </PathIdentifier>
+            </AttributePathIdentifier>
+          </AttributePathIdentifier>
+        </GEBSelectColumn>
+        <GEBSelectColumn Key="@FinishedDate1" ElementType="Order" ValueType="Date">
+          <ColumnID>[409348.0.46320417]</ColumnID>
+          <BaseName>FinishedDate</BaseName>
+          <Name>FinishedDate</Name>
+          <Title>FinishedDate</Title>
+          <IsTarget>false</IsTarget>
+          <NameHasBeenSet>false</NameHasBeenSet>
+          <ColumnFinal>Fail</ColumnFinal>
+          <AttributePathText>FinishedDate</AttributePathText>
+          <AttributePathIdentifier>
+            <AttributePathIdentifier Key="@12" Attribute="Order.FinishedDate">
+              <PathIdentifier>
+                <PathIdentifier Key="@13" StartType="Order">
+                  <Nodes>
+                  </Nodes>
+                </PathIdentifier>
+              </PathIdentifier>
+            </AttributePathIdentifier>
+          </AttributePathIdentifier>
+        </GEBSelectColumn>
+        <GEBFilter Key="@14">
+          <FreeFilterEnabled>true</FreeFilterEnabled>
+          <GEBFreeFilterBody Key="@15">
+            <ExpressionText></ExpressionText>
+            <Converter>
+            </Converter>
+          </GEBFreeFilterBody>
+        </GEBFilter>
+      </GEBConstraintElementData>
+    </GEBConstraintElement>
+  *]
+  Description: 'Check if an order is finished before its due date'
+}

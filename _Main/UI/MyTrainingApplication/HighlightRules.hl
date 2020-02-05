@@ -1,0 +1,35 @@
+Quintiq file version 2.0
+#parent: #root
+HighlightRules
+{
+  HighlightRule
+  {
+    #keys: '1[409348.0.54913854]'
+    Bidirectional: true
+    ContinueHighlighting: true
+    Description: 'Operation -> Task in the GC'
+    Groups: Default
+    HighlightPathString: 'Task'
+    StartTypeString: 'Operation'
+  }
+  HighlightRule
+  {
+    #keys: '1[409348.0.54914944]'
+    Bidirectional: true
+    ContinueHighlighting: true
+    Description: 'Order -> Operation -> tasks in GC'
+    ForwardInvisible: true
+    Groups: Default
+    HighlightPathString: 'Operation'
+    StartTypeString: 'Order'
+  }
+  HighlightRule
+  {
+    #keys: '1[409348.0.54921080]'
+    Description: 'Highlight the next task of the order'
+    Directional: true
+    Groups: Default
+    HighlightPathString: 'Operation.Next.Task'
+    StartTypeString: 'Task'
+  }
+}

@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Type Company
+{
+  #keys: '5[409348.0.2800021][409348.0.2800019][0.0.0][409348.0.2800020][409348.0.2800022]'
+  BaseType: Object
+  Description: 'Company is the entry point in the dataset'
+  OnCreate:
+  [*
+    this.Time( DateTime::Now() );
+    this.GlobalParameters( relnew );
+  *]
+  StructuredName: 'Companys'
+}

@@ -1,0 +1,151 @@
+Quintiq file version 2.0
+#parent: #root
+Constraint IsOnTime
+{
+  #keys: '2[409348.0.46212621][409348.0.46212622]'
+  ConstraintXML:
+  [*
+    <?xml version="1.0" encoding="UTF-16"?>
+    <GEBConstraintElement xmlns="http://www.quintiq.com/GEB/GEBConstraintElement" Key="@IsOnTime1" TargetType="Task" ValueType="Boolean" ModelElement="Task.IsOnTime" TargetColumn="@IsOnTime2">
+      <Name>IsOnTime</Name>
+      <Description>Check if an task is planned before its orders due date</Description>
+      <DefinitionID>[409348.0.46212621]</DefinitionID>
+      <ConstraintKind>Soft</ConstraintKind>
+      <Priority>0</Priority>
+      <ConstraintText>Operation @OperationOperationType@ of order @OrderOrderNr@ is finished at @End.Date()@, but must be done before @OrderDueDate@.</ConstraintText>
+      <GEBConstraintElementData Key="@1">
+        <DefaultColumnPrefix></DefaultColumnPrefix>
+        <ColumnPostfix></ColumnPostfix>
+        <GEBProcessColumn Key="@IsOnTime2" ElementType="Task" ValueType="Boolean">
+          <ColumnID>[409348.0.46212620]</ColumnID>
+          <BaseName>IsOnTime</BaseName>
+          <Name>IsOnTime</Name>
+          <Title>NewConstraint</Title>
+          <IsTarget>true</IsTarget>
+          <NameHasBeenSet>false</NameHasBeenSet>
+          <ColumnFinal>False</ColumnFinal>
+          <GEBDerivation Key="@2">
+            <GEBDerivationBase Key="@3" TargetType="Task">
+              <ColumnID>[409348.0.46212620]</ColumnID>
+              <GEBNodeDerivation Key="@4">
+                <Operation>FirstExpression</Operation>
+                <Conditional>false</Conditional>
+                <Multiple>false</Multiple>
+                <AllowWildcards>false</AllowWildcards>
+                <GEBNodeDerivationExpression Key="@5">
+                  <GEBNodeDerivationExpressionBody Key="@6">
+                    <ExpressionText>End.Date() &lt;= OrderDueDate;</ExpressionText>
+                    <Converter>
+                      <ZeroConverter Key="@7">
+                        <IsStandard>true</IsStandard>
+                        <IsISO>false</IsISO>
+                        <IsCustom>false</IsCustom>
+                        <ConversionType>0</ConversionType>
+                      </ZeroConverter>
+                    </Converter>
+                  </GEBNodeDerivationExpressionBody>
+                </GEBNodeDerivationExpression>
+              </GEBNodeDerivation>
+            </GEBDerivationBase>
+          </GEBDerivation>
+        </GEBProcessColumn>
+        <GEBSelectColumn Key="@OrderOrderNr1" ElementType="Task" ValueType="Number">
+          <ColumnID>[409348.0.46300069]</ColumnID>
+          <BaseName>OrderOrderNr</BaseName>
+          <Name>OrderOrderNr</Name>
+          <Title>OrderOrderNr</Title>
+          <IsTarget>false</IsTarget>
+          <NameHasBeenSet>false</NameHasBeenSet>
+          <ColumnFinal>Fail</ColumnFinal>
+          <AttributePathText>Operation.Order.OrderNr</AttributePathText>
+          <AttributePathIdentifier>
+            <AttributePathIdentifier Key="@8" Attribute="Order.OrderNr">
+              <PathIdentifier>
+                <PathIdentifier Key="@9" StartType="Task">
+                  <Nodes>
+                    <PathIdentifierNode Key="@10" ToType="Operation">
+                      <Distinctive>false</Distinctive>
+                    </PathIdentifierNode>
+                    <PathIdentifierNode Key="@11" ToType="Order">
+                      <Distinctive>false</Distinctive>
+                    </PathIdentifierNode>
+                  </Nodes>
+                </PathIdentifier>
+              </PathIdentifier>
+            </AttributePathIdentifier>
+          </AttributePathIdentifier>
+        </GEBSelectColumn>
+        <GEBSelectColumn Key="@OperationOperationType1" ElementType="Task" ValueType="String">
+          <ColumnID>[409348.0.46300075]</ColumnID>
+          <BaseName>OperationOperationType</BaseName>
+          <Name>OperationOperationType</Name>
+          <Title>OperationOperationType</Title>
+          <IsTarget>false</IsTarget>
+          <NameHasBeenSet>false</NameHasBeenSet>
+          <ColumnFinal>Fail</ColumnFinal>
+          <AttributePathText>Operation.OperationType</AttributePathText>
+          <AttributePathIdentifier>
+            <AttributePathIdentifier Key="@12" Attribute="Operation.OperationType">
+              <PathIdentifier>
+                <PathIdentifier Key="@13" StartType="Task">
+                  <Nodes>
+                    <PathIdentifierNode Key="@14" ToType="Operation">
+                      <Distinctive>false</Distinctive>
+                    </PathIdentifierNode>
+                  </Nodes>
+                </PathIdentifier>
+              </PathIdentifier>
+            </AttributePathIdentifier>
+          </AttributePathIdentifier>
+        </GEBSelectColumn>
+        <GEBSelectColumn Key="@End1" ElementType="Task" ValueType="DateTime">
+          <ColumnID>[409348.0.46300063]</ColumnID>
+          <BaseName>End</BaseName>
+          <Name>End</Name>
+          <Title>End</Title>
+          <IsTarget>false</IsTarget>
+          <NameHasBeenSet>false</NameHasBeenSet>
+          <ColumnFinal>Fail</ColumnFinal>
+          <AttributePathText>End</AttributePathText>
+          <AttributePathIdentifier>
+            <AttributePathIdentifier Key="@15" Attribute="Task.End">
+              <PathIdentifier>
+                <PathIdentifier Key="@16" StartType="Task">
+                  <Nodes>
+                  </Nodes>
+                </PathIdentifier>
+              </PathIdentifier>
+            </AttributePathIdentifier>
+          </AttributePathIdentifier>
+        </GEBSelectColumn>
+        <GEBSelectColumn Key="@OrderDueDate1" ElementType="Task" ValueType="Date">
+          <ColumnID>[409348.0.46300067]</ColumnID>
+          <BaseName>OrderDueDate</BaseName>
+          <Name>OrderDueDate</Name>
+          <Title>OrderDueDate</Title>
+          <IsTarget>false</IsTarget>
+          <NameHasBeenSet>false</NameHasBeenSet>
+          <ColumnFinal>Fail</ColumnFinal>
+          <AttributePathText>Operation.Order.DueDate</AttributePathText>
+          <AttributePathIdentifier>
+            <AttributePathIdentifier Key="@17" Attribute="Order.DueDate">
+              <PathIdentifier>
+                <PathIdentifier Key="@18" StartType="Task">
+                  <Nodes>
+                    <PathIdentifierNode Key="@19" ToType="Operation">
+                      <Distinctive>false</Distinctive>
+                    </PathIdentifierNode>
+                    <PathIdentifierNode Key="@20" ToType="Order">
+                      <Distinctive>false</Distinctive>
+                    </PathIdentifierNode>
+                  </Nodes>
+                </PathIdentifier>
+              </PathIdentifier>
+            </AttributePathIdentifier>
+          </AttributePathIdentifier>
+        </GEBSelectColumn>
+      </GEBConstraintElementData>
+    </GEBConstraintElement>
+  *]
+  Description: 'Check if an task is planned before its orders due date'
+}

@@ -1,0 +1,24 @@
+Quintiq file version 2.0
+#parent: #root
+Relation Order_Company_Company_Order
+{
+  #keys: '1[409348.0.2831035]'
+  Description: 'Each company has many orders, but each order only belongs to one company'
+  DefaultRelationStrategy
+  {
+  }
+  RelationSide.LeftSide Company
+  {
+    #keys: '3[409348.0.2831037][409348.0.2831036][409348.0.2831038]'
+    Cardinality: '0to1'
+    ObjectDefinition: Order
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide Order
+  {
+    #keys: '3[409348.0.2831040][409348.0.2831039][409348.0.2831041]'
+    Cardinality: '1toN'
+    ObjectDefinition: Company
+    OwningSide: 'Owned'
+  }
+}

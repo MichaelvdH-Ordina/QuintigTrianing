@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Speed
+{
+  #keys: '3[409348.0.12000150][409348.0.12000149][409348.0.12000151]'
+  Description: 'The speed in which a machine can process an operation'
+  ValueType: Number
+}

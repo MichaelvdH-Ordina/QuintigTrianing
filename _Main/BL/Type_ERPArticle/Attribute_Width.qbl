@@ -1,0 +1,7 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Width
+{
+  #keys: '3[409348.0.64651113][409348.0.64651112][409348.0.64651114]'
+  ValueType: Real
+}

@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcDuration
+{
+  TextBody:
+  [*
+    // mho23702 Jan-30-2020 (created)
+    
+    value := this.SetupDuration() + Duration::Hours( this.Operation().Order().Quantity()
+                                                     / this.Machine().Speed() );
+    
+    this.Duration( value );
+  *]
+}

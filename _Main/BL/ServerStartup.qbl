@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#parent: #DomainModel
+ServerStartup
+{
+  Text:
+  [*
+    options := DatasetCreateOptions::Construct( "Company" );
+    MDSCompany::Create( options );
+  *]
+}

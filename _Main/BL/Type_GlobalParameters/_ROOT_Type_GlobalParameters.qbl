@@ -1,0 +1,9 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Type GlobalParameters
+{
+  #keys: '5[409348.0.54957884][409348.0.54957882][0.0.0][409348.0.54957883][409348.0.54957885]'
+  BaseType: Object
+  StructuredName: 'GlobalParameterss'
+}

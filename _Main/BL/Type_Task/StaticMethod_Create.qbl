@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Create (Machine owner, Task aftertask) as Task
+{
+  Description: 'Create a new task'
+  TextBody:
+  [*
+    // mho23702 Jan-30-2020 (created)
+    
+    result := owner.AddAfter( construct( Task ), aftertask );
+                                        
+    
+    return result;
+  *]
+}

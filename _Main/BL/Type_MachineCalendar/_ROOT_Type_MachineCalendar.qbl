@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Type MachineCalendar
+{
+  #keys: '5[409348.0.35761878][409348.0.35761876][0.0.0][409348.0.35761877][409348.0.35761879]'
+  BaseType: Calendar
+  Description: 'Calendar for each machine'
+  StructuredName: 'MachineCalendars'
+}

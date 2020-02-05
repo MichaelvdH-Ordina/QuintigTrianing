@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute OrderNr
+{
+  #keys: '3[409348.0.2800108][409348.0.2800107][409348.0.2800109]'
+  Description: 'Number of the order'
+  ValueType: Number
+}

@@ -1,0 +1,25 @@
+Quintiq file version 2.0
+#parent: #root
+Method PlanOn (Machine machine, Task aftertask) as Task
+{
+  Description: 'Plan operation on Machine'
+  TextBody:
+  [*
+    // mho23702 Jan-30-2020 (created)
+    task := this.Task();
+    
+    if( isnull( task ) )
+    {
+      task := Task::Create( machine, aftertask );
+      this.Task( relset, task );
+    }
+    else
+    {
+      machine.MoveAfter( task, aftertask );
+    }
+    
+    this.IsPlanned( true );
+    
+    return task;
+  *]
+}

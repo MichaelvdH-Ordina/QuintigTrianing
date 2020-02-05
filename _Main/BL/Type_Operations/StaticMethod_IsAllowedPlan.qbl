@@ -1,0 +1,19 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod IsAllowedPlan (Operations operations) remote as Boolean
+{
+  TextBody:
+  [*
+    // mho23702 Feb-3-2020 (created)
+    feedbackobject := FeedbackObject::LocalFeedback();
+    
+    value := exists( operations,
+                     Elements,
+                     operation,
+                     not operation.IsPlanned() );
+    
+    feedbackobject.AddHard( value, Translations::Feedback_CheckOperationsUnplanned( operations ) );
+    
+    return feedbackobject.IsAllowed();
+  *]
+}

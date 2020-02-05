@@ -1,0 +1,35 @@
+Quintiq file version 2.0
+#parent: #root
+Relation Machine_TaskFirstOnDay_Task_MachineFirstOnDay
+{
+  #keys: '1[409348.0.67132402]'
+  Description: 'Denote the first task of the day on a machine'
+  DeclarativeSequenceRelationStrategy
+  {
+    #keys: '13[0.0.0][409348.0.69702005][409348.0.69701999][409348.0.69702006][409348.0.69702000][409348.0.69702007][409348.0.69702001][409348.0.69702008][409348.0.69702002][409348.0.69702009][409348.0.69702003][409348.0.69702010][409348.0.69702004]'
+    SequenceElementSuffix: 'FirstOnDay'
+    SequenceSuffix: 'FirstOnDay'
+    SortAttributes:
+    [
+      DeclarativeSequenceRelationSortAttribute
+      {
+        #keys: '1[409348.0.69702012]'
+        Attribute: 'Start'
+      }
+    ]
+  }
+  RelationSide.LeftSide TaskFirstOnDay
+  {
+    #keys: '3[409348.0.67132404][409348.0.67132403][409348.0.67132405]'
+    Cardinality: '1toN'
+    ObjectDefinition: Machine
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide MachineFirstOnDay
+  {
+    #keys: '3[409348.0.67132407][409348.0.67132406][409348.0.67132408]'
+    Cardinality: '0to1'
+    ObjectDefinition: Task
+    OwningSide: 'Reference'
+  }
+}

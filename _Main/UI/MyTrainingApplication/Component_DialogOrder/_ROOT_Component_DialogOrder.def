@@ -1,0 +1,178 @@
+Quintiq file version 2.0
+#root
+#parent: MyTrainingApplication
+OrphanComponent DialogOrder
+{
+  #keys: '[409348.0.6355000]'
+  BaseType: 'Dialog'
+  Databinding: 'shadow[Order]'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 0 id: 424 parent: 0 }
+      GBFlow.Column { grow: 0 id: 885 parent: 0 }
+      GBFlow.Column { grow: 128 id: 728 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => LabelOrderNr
+        Position { startcolumn: 424 startrow: 680 endcolumn: 424 endrow: 680 }
+      }
+      GBElement
+      {
+        Component => LabelDueDate
+        Position { startcolumn: 424 startrow: 419 endcolumn: 424 endrow: 419 }
+      }
+      GBElement
+      {
+        Component => LabelQuantity
+        Position { startcolumn: 424 startrow: 597 endcolumn: 424 endrow: 597 }
+      }
+      GBElement
+      {
+        Component => EditorOrderNr
+        Position { startcolumn: 885 startrow: 680 endcolumn: 728 endrow: 680 }
+      }
+      GBElement
+      {
+        Component => GUIDateSelectorDueDate
+        Position { startcolumn: 885 startrow: 419 endcolumn: 885 endrow: 419 }
+      }
+      GBElement
+      {
+        Component => EditorQuantity
+        Position { startcolumn: 885 startrow: 597 endcolumn: 728 endrow: 597 }
+      }
+      GBElement
+      {
+        Component => EditorWidth
+        Position { startcolumn: 885 startrow: 595 endcolumn: 728 endrow: 595 }
+      }
+      GBElement
+      {
+        Component => LabelWidth
+        Position { startcolumn: 424 startrow: 595 endcolumn: 424 endrow: 595 }
+      }
+      GBElement
+      {
+        Component => EditorLength
+        Position { startcolumn: 885 startrow: 125 endcolumn: 728 endrow: 125 }
+      }
+      GBElement
+      {
+        Component => Label352
+        Position { startcolumn: 424 startrow: 125 endcolumn: 424 endrow: 125 }
+      }
+    ]
+    Gaps: [ left: 10 right: 10 top: 10 bottom: 10 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 0 id: 680 parent: 0 }
+      GBFlow.Row { grow: 0 id: 419 parent: 0 }
+      GBFlow.Row { grow: 0 id: 597 parent: 0 }
+      GBFlow.Row { grow: 0 id: 595 parent: 0 }
+      GBFlow.Row { grow: 0 id: 125 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: EditorOrderNr
+    Component LabelOrderNr
+    {
+      #keys: '[409348.0.6355005]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'OrderNr'
+        Transparent: true
+      ]
+    }
+    Component GUIDateSelectorDueDate
+    {
+      #keys: '[409348.0.6355006]'
+      BaseType: 'GUIDateSelector'
+      Properties:
+      [
+        BackgroundColor: 'Window'
+        DataBinding: 'Dialog.Data.DueDate'
+        Date: 2020-01-28
+      ]
+    }
+    Component LabelDueDate
+    {
+      #keys: '[409348.0.6355007]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'DueDate'
+        Transparent: true
+      ]
+    }
+    #child: EditorQuantity
+    Component LabelQuantity
+    {
+      #keys: '[409348.0.6355011]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Quantity'
+        Transparent: true
+      ]
+    }
+    #child: Toolbar572
+    #child: EditorWidth
+    #child: EditorLength
+    Component LabelWidth
+    {
+      #keys: '[409348.0.54909012]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Width'
+        Transparent: true
+      ]
+    }
+    Component Label352
+    {
+      #keys: '[409348.0.54910446]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Length'
+        Transparent: true
+      ]
+    }
+  ]
+  Properties:
+  [
+    EnterButton: 'btnOk'
+    EscapeButton: 'btnCancel'
+    Height: 28
+    Title: 'Order'
+    Width: 160
+    WindowState: 'minimized'
+    ModeledStringList ChildOrdering
+    {
+      c: EditorOrderNr
+      c: GUIDateSelectorDueDate
+      c: LabelOrderNr
+      c: EditorQuantity
+      c: LabelDueDate
+      c: LabelQuantity
+      c: Toolbar572
+      c: EditorWidth
+      c: LabelWidth
+      c: EditorLength
+      c: Label352
+    }
+  ]
+}

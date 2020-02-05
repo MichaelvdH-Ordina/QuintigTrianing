@@ -1,0 +1,26 @@
+Quintiq file version 2.0
+#parent: ListOrder
+Response OnClick (Order selection) id:Response_ListOrder_MenuPlanOrder_OnClick
+{
+  #keys: '[409348.0.24971747]'
+  Body:
+  [*
+    // Plan unplanned operation
+    selection.Plan();
+  *]
+  DefinitionID => /ListOrder/Responsedef_ListOrder_Menu_OnClick
+  GroupServerCalls: true
+  Initiator: 'MenuPlanOrder'
+  Precondition:
+  [*
+    value := exists( selection,
+                     Operation,
+                     operation,
+                     operation.IsPlanned() = false );
+                     
+    FeedbackObject::AddHard( value,
+                             Translations::Feedback_CheckOrderUnplanned( selection ) );
+    
+    return FeedbackObject::IsAllowed();
+  *]
+}

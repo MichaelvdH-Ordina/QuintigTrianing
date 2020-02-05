@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Type Order
+{
+  #keys: '5[409348.0.2831032][409348.0.2831030][0.0.0][409348.0.2831031][409348.0.2831033]'
+  BaseType: Object
+  Description: 'Order object of quibi'
+  OnCreate:
+  [*
+    this.Operation( relnew, OperationType := "C" );
+    this.Operation( relnew, OperationType := "F" );
+    this.Operation( relnew, OperationType := "P" );
+  *]
+  StructuredName: 'Orders'
+}

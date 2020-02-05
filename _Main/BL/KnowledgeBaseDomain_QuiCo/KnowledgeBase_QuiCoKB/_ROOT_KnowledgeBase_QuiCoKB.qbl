@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#root
+#parent: #root
+KnowledgeBase QuiCoKB
+{
+  DefaultBranchName: 'KB'
+  Description: 'Knowledge base for Quico app'
+}

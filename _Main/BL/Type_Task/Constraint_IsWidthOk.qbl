@@ -1,0 +1,110 @@
+Quintiq file version 2.0
+#parent: #root
+Constraint IsWidthOk
+{
+  #keys: '2[409348.0.52400911][409348.0.52400912]'
+  ConstraintXML:
+  [*
+    <?xml version="1.0" encoding="UTF-16"?>
+    <GEBConstraintElement xmlns="http://www.quintiq.com/GEB/GEBConstraintElement" Key="@IsWidthOk1" TargetType="Task" ValueType="Boolean" ModelElement="Task.IsWidthOk" TargetColumn="@IsWidthOk2">
+      <Name>IsWidthOk</Name>
+      <Description></Description>
+      <DefinitionID>[409348.0.52400911]</DefinitionID>
+      <ConstraintKind>Soft</ConstraintKind>
+      <Priority>0</Priority>
+      <ConstraintText>This task is too wide for machine @this.Machine().Name()@.</ConstraintText>
+      <GEBConstraintElementData Key="@1">
+        <DefaultColumnPrefix></DefaultColumnPrefix>
+        <ColumnPostfix></ColumnPostfix>
+        <GEBProcessColumn Key="@IsWidthOk2" ElementType="Task" ValueType="Boolean">
+          <ColumnID>[409348.0.52400910]</ColumnID>
+          <BaseName>IsWidthOk</BaseName>
+          <Name>IsWidthOk</Name>
+          <Title>NewConstraint</Title>
+          <IsTarget>true</IsTarget>
+          <NameHasBeenSet>false</NameHasBeenSet>
+          <ColumnFinal>False</ColumnFinal>
+          <GEBDerivation Key="@2">
+            <GEBDerivationBase Key="@3" TargetType="Task">
+              <ColumnID>[409348.0.52400910]</ColumnID>
+              <GEBNodeDerivation Key="@4">
+                <Operation>FirstExpression</Operation>
+                <Conditional>false</Conditional>
+                <Multiple>false</Multiple>
+                <AllowWildcards>false</AllowWildcards>
+                <GEBNodeDerivationExpression Key="@5">
+                  <GEBNodeDerivationExpressionBody Key="@6">
+                    <ExpressionText>OrderWidth &lt;=  MachineMaximumWidth</ExpressionText>
+                    <Converter>
+                      <ZeroConverter Key="@7">
+                        <IsStandard>true</IsStandard>
+                        <IsISO>false</IsISO>
+                        <IsCustom>false</IsCustom>
+                        <ConversionType>0</ConversionType>
+                      </ZeroConverter>
+                    </Converter>
+                  </GEBNodeDerivationExpressionBody>
+                </GEBNodeDerivationExpression>
+              </GEBNodeDerivation>
+            </GEBDerivationBase>
+          </GEBDerivation>
+        </GEBProcessColumn>
+        <GEBSelectColumn Key="@MachineMaximumWidth1" ElementType="Task" ValueType="Number">
+          <ColumnID>[409348.0.70900056]</ColumnID>
+          <BaseName>MachineMaximumWidth</BaseName>
+          <Name>MachineMaximumWidth</Name>
+          <Title>MachineMaximumWidth</Title>
+          <IsTarget>false</IsTarget>
+          <NameHasBeenSet>false</NameHasBeenSet>
+          <ColumnFinal>Fail</ColumnFinal>
+          <AttributePathText>Machine.MaximumWidth</AttributePathText>
+          <AttributePathIdentifier>
+            <AttributePathIdentifier Key="@8" Attribute="Machine.MaximumWidth">
+              <PathIdentifier>
+                <PathIdentifier Key="@9" StartType="Task">
+                  <Nodes>
+                    <PathIdentifierNode Key="@10" ToType="Machine">
+                      <Distinctive>true</Distinctive>
+                    </PathIdentifierNode>
+                  </Nodes>
+                </PathIdentifier>
+              </PathIdentifier>
+            </AttributePathIdentifier>
+          </AttributePathIdentifier>
+        </GEBSelectColumn>
+        <GEBSelectColumn Key="@OrderWidth1" ElementType="Task" ValueType="Number">
+          <ColumnID>[409348.0.70900062]</ColumnID>
+          <BaseName>OrderWidth</BaseName>
+          <Name>OrderWidth</Name>
+          <Title>OrderWidth</Title>
+          <IsTarget>false</IsTarget>
+          <NameHasBeenSet>false</NameHasBeenSet>
+          <ColumnFinal>Fail</ColumnFinal>
+          <AttributePathText>Operation.Order.Width</AttributePathText>
+          <AttributePathIdentifier>
+            <AttributePathIdentifier Key="@11" Attribute="Order.Width">
+              <PathIdentifier>
+                <PathIdentifier Key="@12" StartType="Task">
+                  <Nodes>
+                    <PathIdentifierNode Key="@13" ToType="Operation">
+                      <Distinctive>false</Distinctive>
+                    </PathIdentifierNode>
+                    <PathIdentifierNode Key="@14" ToType="Order">
+                      <Distinctive>false</Distinctive>
+                    </PathIdentifierNode>
+                  </Nodes>
+                </PathIdentifier>
+              </PathIdentifier>
+            </AttributePathIdentifier>
+          </AttributePathIdentifier>
+        </GEBSelectColumn>
+        <GEBSortCriteria Key="@15">
+          <GEBSortColumn Key="@16" Column="@IsWidthOk2">
+            <ColumnID>[409348.0.52400910]</ColumnID>
+            <Direction>Ascending</Direction>
+          </GEBSortColumn>
+        </GEBSortCriteria>
+      </GEBConstraintElementData>
+    </GEBConstraintElement>
+  *]
+}

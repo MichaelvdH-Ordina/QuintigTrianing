@@ -1,0 +1,26 @@
+Quintiq file version 2.0
+#parent: #root
+TableFunction CalcMaximumWidth
+{
+  DefaultOutputFunction:
+  [*
+    // mho23702 Feb-3-2020 (created)
+    
+    value := 9999;
+    this.MaximumWidth( value );
+  *]
+  OutputFunction:
+  [*
+    // mho23702 Feb-3-2020 (created)
+    
+    value := MaximumWidth;
+    this.MaximumWidth( value );
+  *]
+  TableDefinition: Machines
+  FunctionColumnMatch
+  {
+    ColumnDefinition: Name
+    MatchExpression: 'this.Name()'
+    Operator: '='
+  }
+}

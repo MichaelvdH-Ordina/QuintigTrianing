@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute LengthDifference
+{
+  #keys: '3[409348.0.35711146][409348.0.35711145][409348.0.35711147]'
+  Description: 'Difference of length compared to the previous tasks on the machine.'
+  ValueType: Number
+}

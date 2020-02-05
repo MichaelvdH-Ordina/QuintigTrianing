@@ -1,0 +1,21 @@
+Quintiq file version 2.0
+#parent: #root
+Method New (GUIComponent parent, Company owner) as Order id:Method_DialogCreateEditOrder_New
+{
+  #keys: '[409348.0.74659490]'
+  Body:
+  [*
+    
+    
+    data := owner.Order( relshadow );
+    
+    Dialog.Data( data );
+    
+    if (Dialog.DoModal( parent ) > 0 )
+    {
+      data.Commit();
+    }
+    
+    return data.WrappedInstance();
+  *]
+}

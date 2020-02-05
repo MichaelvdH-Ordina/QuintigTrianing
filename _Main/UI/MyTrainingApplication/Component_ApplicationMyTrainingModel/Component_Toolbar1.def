@@ -1,0 +1,85 @@
+Quintiq file version 2.0
+Component Toolbar1
+{
+  #keys: '[514.0.118234]'
+  BaseType: 'Toolbar'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 0 id: 1 parent: 0 }
+      GBFlow.Column { grow: 0 id: 2 parent: 0 }
+      GBFlow.Column { grow: 0 id: 640 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => btnUndo
+        Position { startcolumn: 1 startrow: 1 endcolumn: 1 endrow: 1 }
+      }
+      GBElement
+      {
+        Component => Button2
+        Position { startcolumn: 2 startrow: 1 endcolumn: 2 endrow: 1 }
+      }
+      GBElement
+      {
+        Component => ButtonSynchronize
+        Position { startcolumn: 640 startrow: 1 endcolumn: 640 endrow: 1 }
+      }
+    ]
+    Gaps: [ left: 5 right: 5 top: 5 bottom: 5 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 0 id: 1 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    Component btnUndo
+    {
+      #keys: '[514.0.118235]'
+      BaseType: 'Button'
+      Properties:
+      [
+        Image: 'UNDO'
+        SizePosition: 'lt2 24 3 25'
+        Tooltip: 'Undo'
+      ]
+    }
+    Component Button2
+    {
+      #keys: '[514.0.118236]'
+      BaseType: 'Button'
+      Properties:
+      [
+        Image: 'REDO'
+        SizePosition: 'lt25 47 3 25'
+        Tooltip: 'Redo'
+      ]
+    }
+    Component ButtonSynchronize
+    {
+      #keys: '[409348.0.64613103]'
+      BaseType: 'Button'
+      Properties:
+      [
+        Image: 'SERVER_CLIENT_EXCHANGE'
+        Text: 'Synchronize'
+      ]
+    }
+  ]
+  Properties:
+  [
+    Priority: 1
+    Size: 36
+    ModeledStringList ChildOrdering
+    {
+      c: btnUndo
+      c: Button2
+      c: ButtonSynchronize
+    }
+  ]
+}

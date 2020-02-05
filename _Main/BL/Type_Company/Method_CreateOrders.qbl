@@ -1,0 +1,28 @@
+Quintiq file version 2.0
+#parent: #root
+Method CreateOrders
+{
+  Description:
+  [*
+    Create 25 testorders,
+    with random qty (300,450,...,1200), random length (80,90,...130)  and due date (7-10 days from today)
+  *]
+  TextBody:
+  [*
+    // mho23702 Jan-28-2020 (created)
+    for( i:=1; i <= 25; i++)
+    {
+      Order::Create( this,
+                     i,
+                     150 * Number::Random( 2, 8 ),
+                     Date::Today()+Number::Random( 7, 10 ),
+                     10 * Number::Random( 8, 13 ),
+                     10 * Number::Random( 1, 5 ),
+                     minselect( this,
+                                ERPArticle,
+                                erparticle,
+                                true,
+                                Number::Random() ).ArticleNo()  );
+    }
+  *]
+}

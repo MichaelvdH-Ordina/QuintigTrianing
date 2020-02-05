@@ -1,0 +1,90 @@
+Quintiq file version 2.0
+Component SplitterWndOrder_Operation
+{
+  #keys: '[409348.0.6353066]'
+  BaseType: 'SplitterWnd'
+  Children:
+  [
+    Component Orders
+    {
+      #keys: '[409348.0.6353067]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 383 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /ListOrder
+            Position { startcolumn: 383 startrow: 924 endcolumn: 383 endrow: 924 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 924 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: ListOrder
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Title: 'Orders'
+      ]
+    }
+    Component Operations
+    {
+      #keys: '[409348.0.6353068]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 194 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /ListOperation
+            Position { startcolumn: 194 startrow: 664 endcolumn: 194 endrow: 664 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 664 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: ListOperation
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Title: 'Operations'
+      ]
+    }
+  ]
+  Properties:
+  [
+    DoubleBuffering: false
+    ModeledStringList ChildOrdering
+    {
+      c: Orders
+      c: Operations
+    }
+  ]
+}

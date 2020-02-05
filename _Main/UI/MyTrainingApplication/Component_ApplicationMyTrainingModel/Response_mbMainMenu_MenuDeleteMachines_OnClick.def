@@ -1,0 +1,18 @@
+Quintiq file version 2.0
+#parent: mbMainMenu/MenuDeleteMachines
+Response OnClick () id:Response_mbMainMenu_MenuDeleteMachines_OnClick
+{
+  #keys: '[409348.0.2887560]'
+  Body:
+  [*
+    //Delete machines
+    Company.Machine( relflush );
+  *]
+  DefinitionID: 'Responsedef_Menu_OnClick'
+  Precondition:
+  [*
+    value := Company.Machine( relsize ) > 0;
+    FeedbackObject::AddHard( value, "No machines exist." );
+    return FeedbackObject::IsAllowed();
+  *]
+}

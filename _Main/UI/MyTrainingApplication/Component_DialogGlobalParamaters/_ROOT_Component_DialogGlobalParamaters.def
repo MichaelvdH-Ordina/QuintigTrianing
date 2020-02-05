@@ -1,0 +1,75 @@
+Quintiq file version 2.0
+#root
+#parent: MyTrainingApplication
+OrphanComponent DialogGlobalParamaters
+{
+  #keys: '[409348.0.62253226]'
+  BaseType: 'Dialog'
+  Databinding: 'shadow[GlobalParameters]'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 0 id: 897 parent: 0 }
+      GBFlow.Column { grow: 0 id: 770 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => GUIDurationSelector754
+        Position { startcolumn: 770 startrow: 375 endcolumn: 770 endrow: 375 }
+      }
+      GBElement
+      {
+        Component => LabelTransportTime
+        Position { startcolumn: 897 startrow: 375 endcolumn: 897 endrow: 375 }
+      }
+    ]
+    Gaps: [ left: 10 right: 10 top: 10 bottom: 10 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 0 id: 375 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: Toolbar748
+    Component GUIDurationSelector754
+    {
+      #keys: '[409348.0.62255379]'
+      BaseType: 'GUIDurationSelector'
+      Properties:
+      [
+        BackgroundColor: 'Window'
+        DataBinding: 'Company.GlobalParameters.TransportTime'
+      ]
+    }
+    Component LabelTransportTime
+    {
+      #keys: '[409348.0.62261083]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Transport time'
+        Transparent: true
+      ]
+    }
+  ]
+  Properties:
+  [
+    EnterButton: 'btnOk'
+    EscapeButton: 'btnCancel'
+    Image: 'GLOBE'
+    Title: 'Global Parameters'
+    Width: 242
+    ModeledStringList ChildOrdering
+    {
+      c: Toolbar748
+      c: GUIDurationSelector754
+      c: LabelTransportTime
+    }
+  ]
+}
