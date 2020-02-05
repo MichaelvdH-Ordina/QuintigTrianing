@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Description
+{
+  #keys: '3[409348.0.77031019][409348.0.77031018][409348.0.77031020]'
+  Description: 'Description of the machine'
+  ValueType: String
+}

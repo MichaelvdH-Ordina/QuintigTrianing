@@ -8,13 +8,11 @@ Function CalcStart
     now := this.Machine().Company().Time();
     
     prevtaskend := guard( this.Previous().End(), now );
-    prevoperationend := guard( this.Operation().Previous().Task().End(), now );
     earlieststart := this.Operation().EarliestStart();
     planningstart := now;
     
     
     value := maxvalue( prevtaskend, 
-                       prevoperationend,
                        earlieststart,
                        planningstart );
     
