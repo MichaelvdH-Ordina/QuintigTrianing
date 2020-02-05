@@ -1,8 +1,0 @@
-Quintiq file version 2.0
-#parent: #root
-Attribute CustomerName
-{
-  #keys: '3[409348.0.72231817][409348.0.72231816][409348.0.72231818]'
-  Description: '(Dummy) Name of customer'
-  ValueType: String
-}

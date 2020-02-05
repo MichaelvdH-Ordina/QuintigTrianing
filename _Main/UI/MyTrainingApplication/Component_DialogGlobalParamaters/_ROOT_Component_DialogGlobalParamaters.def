@@ -62,9 +62,10 @@ OrphanComponent DialogGlobalParamaters
   [
     EnterButton: 'btnOk'
     EscapeButton: 'btnCancel'
+    Height: 109
     Image: 'GLOBE'
     Title: 'Global Parameters'
-    Width: 242
+    Width: 241
     ModeledStringList ChildOrdering
     {
       c: Toolbar748

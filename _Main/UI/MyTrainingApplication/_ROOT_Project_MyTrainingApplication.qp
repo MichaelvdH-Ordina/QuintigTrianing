@@ -4,7 +4,7 @@ Project id:MyTrainingApplication
 {
   ProjectProperties
   {
-    BuildVersion: '4.0.56.101'
+    BuildVersion: '4.0.56.102'
     Description: 'Quico planning application'
     ProjectKind: 'DesktopClient'
   }
